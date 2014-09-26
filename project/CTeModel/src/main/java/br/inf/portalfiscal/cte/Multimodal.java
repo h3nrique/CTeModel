@@ -10,7 +10,6 @@ package br.inf.portalfiscal.cte;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
@@ -26,10 +25,22 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="CTe" type="{http://www.portalfiscal.inf.br/cte}TCTe"/>
- *         &lt;element name="protCTe" type="{http://www.portalfiscal.inf.br/cte}TProtCTe"/>
+ *         &lt;element name="COTM">
+ *           &lt;simpleType>
+ *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
+ *               &lt;pattern value=""/>
+ *             &lt;/restriction>
+ *           &lt;/simpleType>
+ *         &lt;/element>
+ *         &lt;element name="indNegociavel">
+ *           &lt;simpleType>
+ *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
+ *               &lt;enumeration value="0"/>
+ *               &lt;enumeration value="1"/>
+ *             &lt;/restriction>
+ *           &lt;/simpleType>
+ *         &lt;/element>
  *       &lt;/sequence>
- *       &lt;attribute name="versao" use="required" type="{http://www.portalfiscal.inf.br/cte}TVerCTe" />
  *     &lt;/restriction>
  *   &lt;/complexContent>
  * &lt;/complexType>
@@ -39,89 +50,63 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "cTe",
-    "protCTe"
+    "cotm",
+    "indNegociavel"
 })
-@XmlRootElement(name = "cteProc")
-public class CteProc {
+@XmlRootElement(name = "multimodal")
+public class Multimodal {
 
-    @XmlElement(name = "CTe", required = true)
-    protected TCTe cTe;
+    @XmlElement(name = "COTM", required = true)
+    protected String cotm;
     @XmlElement(required = true)
-    protected TProtCTe protCTe;
-    @XmlAttribute(name = "versao", required = true)
-    protected String versao;
+    protected String indNegociavel;
 
     /**
-     * Gets the value of the cTe property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link TCTe }
-     *     
-     */
-    public TCTe getCTe() {
-        return cTe;
-    }
-
-    /**
-     * Sets the value of the cTe property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link TCTe }
-     *     
-     */
-    public void setCTe(TCTe value) {
-        this.cTe = value;
-    }
-
-    /**
-     * Gets the value of the protCTe property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link TProtCTe }
-     *     
-     */
-    public TProtCTe getProtCTe() {
-        return protCTe;
-    }
-
-    /**
-     * Sets the value of the protCTe property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link TProtCTe }
-     *     
-     */
-    public void setProtCTe(TProtCTe value) {
-        this.protCTe = value;
-    }
-
-    /**
-     * Gets the value of the versao property.
+     * Gets the value of the cotm property.
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getVersao() {
-        return versao;
+    public String getCOTM() {
+        return cotm;
     }
 
     /**
-     * Sets the value of the versao property.
+     * Sets the value of the cotm property.
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setVersao(String value) {
-        this.versao = value;
+    public void setCOTM(String value) {
+        this.cotm = value;
+    }
+
+    /**
+     * Gets the value of the indNegociavel property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getIndNegociavel() {
+        return indNegociavel;
+    }
+
+    /**
+     * Sets the value of the indNegociavel property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setIndNegociavel(String value) {
+        this.indNegociavel = value;
     }
 
 }

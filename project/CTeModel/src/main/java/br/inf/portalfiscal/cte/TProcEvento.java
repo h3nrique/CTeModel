@@ -8,8 +8,6 @@
 
 package br.inf.portalfiscal.cte;
 
-import java.util.ArrayList;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
@@ -18,21 +16,21 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * Tipo Pedido de Concessão de Autorização da CT-e
+ * Tipo procEvento
  * 
- * <p>Java class for TEnviCTe complex type.
+ * <p>Java class for TProcEvento complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="TEnviCTe">
+ * &lt;complexType name="TProcEvento">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="idLote" type="{http://www.portalfiscal.inf.br/cte}TIdLote"/>
- *         &lt;element name="CTe" type="{http://www.portalfiscal.inf.br/cte}TCTe" maxOccurs="50"/>
+ *         &lt;element name="eventoCTe" type="{http://www.portalfiscal.inf.br/cte}TEvento"/>
+ *         &lt;element name="retEventoCTe" type="{http://www.portalfiscal.inf.br/cte}TRetEvento"/>
  *       &lt;/sequence>
- *       &lt;attribute name="versao" use="required" type="{http://www.portalfiscal.inf.br/cte}TVerCTe" />
+ *       &lt;attribute name="versao" use="required" type="{http://www.portalfiscal.inf.br/cte}TVerEvento" />
  *     &lt;/restriction>
  *   &lt;/complexContent>
  * &lt;/complexType>
@@ -41,70 +39,65 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TEnviCTe", propOrder = {
-    "idLote",
-    "cTe"
+@XmlType(name = "TProcEvento", propOrder = {
+    "eventoCTe",
+    "retEventoCTe"
 })
-public class TEnviCTe {
+public class TProcEvento {
 
     @XmlElement(required = true)
-    protected String idLote;
-    @XmlElement(name = "CTe", required = true)
-    protected List<TCTe> cTe;
+    protected TEvento eventoCTe;
+    @XmlElement(required = true)
+    protected TRetEvento retEventoCTe;
     @XmlAttribute(name = "versao", required = true)
     protected String versao;
 
     /**
-     * Gets the value of the idLote property.
+     * Gets the value of the eventoCTe property.
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link TEvento }
      *     
      */
-    public String getIdLote() {
-        return idLote;
+    public TEvento getEventoCTe() {
+        return eventoCTe;
     }
 
     /**
-     * Sets the value of the idLote property.
+     * Sets the value of the eventoCTe property.
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link TEvento }
      *     
      */
-    public void setIdLote(String value) {
-        this.idLote = value;
+    public void setEventoCTe(TEvento value) {
+        this.eventoCTe = value;
     }
 
     /**
-     * Gets the value of the cTe property.
+     * Gets the value of the retEventoCTe property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the cTe property.
-     * 
-     * <p>
-     * For example, to add a new item, do as follows:
-     * <pre>
-     *    getCTe().add(newItem);
-     * </pre>
-     * 
-     * 
-     * <p>
-     * Objects of the following type(s) are allowed in the list
-     * {@link TCTe }
-     * 
-     * 
+     * @return
+     *     possible object is
+     *     {@link TRetEvento }
+     *     
      */
-    public List<TCTe> getCTe() {
-        if (cTe == null) {
-            cTe = new ArrayList<TCTe>();
-        }
-        return this.cTe;
+    public TRetEvento getRetEventoCTe() {
+        return retEventoCTe;
+    }
+
+    /**
+     * Sets the value of the retEventoCTe property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link TRetEvento }
+     *     
+     */
+    public void setRetEventoCTe(TRetEvento value) {
+        this.retEventoCTe = value;
     }
 
     /**

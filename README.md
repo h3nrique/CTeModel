@@ -1,4 +1,4 @@
 CTeModel
 ========
 
-Projeto com objetos utilizados para as chamadas dos serviços de CTe da Receita Federal.
+Projeto com objetos utilizados nos serviços de CTe disponibilizados pela Receita Federal.

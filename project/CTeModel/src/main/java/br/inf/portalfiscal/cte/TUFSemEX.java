@@ -13,12 +13,12 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for TUf.
+ * <p>Java class for TUF_sem_EX.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * <p>
  * <pre>
- * &lt;simpleType name="TUf">
+ * &lt;simpleType name="TUF_sem_EX">
  *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
  *     &lt;whiteSpace value="preserve"/>
  *     &lt;enumeration value="AC"/>
@@ -48,15 +48,14 @@ import javax.xml.bind.annotation.XmlType;
  *     &lt;enumeration value="SE"/>
  *     &lt;enumeration value="SP"/>
  *     &lt;enumeration value="TO"/>
- *     &lt;enumeration value="EX"/>
  *   &lt;/restriction>
  * &lt;/simpleType>
  * </pre>
  * 
  */
-@XmlType(name = "TUf")
+@XmlType(name = "TUF_sem_EX")
 @XmlEnum
-public enum TUf {
+public enum TUFSemEX {
 
     AC,
     AL,
@@ -84,14 +83,13 @@ public enum TUf {
     SC,
     SE,
     SP,
-    TO,
-    EX;
+    TO;
 
     public String value() {
         return name();
     }
 
-    public static TUf fromValue(String v) {
+    public static TUFSemEX fromValue(String v) {
         return valueOf(v);
     }
 

@@ -1,7 +1,7 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.portalfiscal.inf.br/cte" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" targetNamespace="http://www.portalfiscal.inf.br/cte" elementFormDefault="qualified" attributeFormDefault="unqualified">
 	<xs:import namespace="http://www.w3.org/2000/09/xmldsig#" schemaLocation="xmldsig-core-schema_v1.01.xsd"/>
-	<xs:include schemaLocation="tiposBasicoCTe_v1.02.xsd"/>
+	<xs:include schemaLocation="tiposGeralCTe_v1.03.xsd"/>
 	<xs:complexType name="TInutCTe">
 		<xs:annotation>
 			<xs:documentation>Tipo Pedido de Inutilização de Numeração do Conhecimento de Transporte eletrônico</xs:documentation>
@@ -71,7 +71,13 @@
 							</xs:annotation>
 						</xs:element>
 					</xs:sequence>
-					<xs:attribute name="Id" type="xs:ID" use="required"/>
+					<xs:attribute name="Id" use="required">
+						<xs:simpleType>
+							<xs:restriction base="xs:ID">
+								<xs:pattern value="ID[0-9]{39}"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:attribute>
 				</xs:complexType>
 			</xs:element>
 			<xs:element ref="ds:Signature"/>
@@ -188,10 +194,10 @@
 	</xs:complexType>
 	<xs:simpleType name="TVerInutCTe">
 		<xs:annotation>
-			<xs:documentation> Tipo Versão Inutilização de numeração de CT-e - 1.01</xs:documentation>
+			<xs:documentation> Tipo Versão Inutilização de numeração de CT-e - 1.03</xs:documentation>
 		</xs:annotation>
-		<xs:restriction base="xs:token">
-			<xs:pattern value="1\.01"/>
+		<xs:restriction base="xs:string">
+			<xs:pattern value="1\.03"/>
 		</xs:restriction>
 	</xs:simpleType>
 </xs:schema>

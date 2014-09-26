@@ -1,8 +1,8 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!-- edited with XMLSpy v2005 rel. 3 U (http://www.altova.com) by Administrador (.) -->
 <xs:schema xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.portalfiscal.inf.br/cte" targetNamespace="http://www.portalfiscal.inf.br/cte" elementFormDefault="qualified" attributeFormDefault="unqualified">
 	<xs:import namespace="http://www.w3.org/2000/09/xmldsig#" schemaLocation="xmldsig-core-schema_v1.01.xsd"/>
-	<xs:include schemaLocation="tiposBasicoCTe_v1.02.xsd"/>
+	<xs:include schemaLocation="tiposGeralCTe_v1.03.xsd"/>
 	<xs:complexType name="TProtCTe">
 		<xs:annotation>
 			<xs:documentation>Tipo Protocolo de status resultado do processamento da CT-e</xs:documentation>
@@ -134,10 +134,11 @@
 	</xs:complexType>
 	<xs:simpleType name="TVerConsReciCTe">
 		<xs:annotation>
-			<xs:documentation> Tipo Versão do Consulta Lote de CT-e - 1.01</xs:documentation>
+			<xs:documentation> Tipo Versão do Consulta Lote de CT-e - 1.03</xs:documentation>
 		</xs:annotation>
-		<xs:restriction base="xs:token">
-			<xs:pattern value="1\.01"/>
+		<xs:restriction base="xs:string">
+			<xs:whiteSpace value="preserve"/>
+			<xs:pattern value="1\.03"/>
 		</xs:restriction>
 	</xs:simpleType>
 </xs:schema>

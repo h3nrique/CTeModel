@@ -120,7 +120,7 @@
 											<xs:documentation>Forma de emissão do CT-e</xs:documentation>
 											<xs:documentation>Preencher com:
 1 - Normal;
- 4-EPEC; 5 - Contingência FSDA;
+ 4-EPEC pela SVC; 5 - Contingência FSDA;
 	7 - Autorização pela SVC-RS;
  8 - Autorização pela SVC-SP</xs:documentation>
 										</xs:annotation>
@@ -1298,7 +1298,7 @@ REENTREGA; DEVOLUÇÃO; REFATURAMENTO; etc</xs:documentation>
 1 - Peso Bruto, sempre em quilogramas (obrigatório);
 2 - Peso Cubado; sempre em quilogramas;
 3 - Quantidade de volumes, sempre em unidades (obrigatório);
-4 - Cubagem, sempre em metros cúbicos (obrigatório apenas quando for impossível preencher as dimensões da(s) embalagem(ens) na tag #12 do leiaute do Aéreo).</xs:documentation>
+4 - Cubagem, sempre em metros cúbicos (obrigatório apenas quando for impossível preencher as dimensões da(s) embalagem(ens) na tag xDime do leiaute do Aéreo).</xs:documentation>
 														</xs:annotation>
 														<xs:complexType>
 															<xs:sequence>
@@ -1488,7 +1488,7 @@ Opcional para Redespacho Intermediario e Serviço vinculado a multimodal.</xs:do
 																		<xs:element name="infUnidTransp" type="TUnidadeTransp" minOccurs="0" maxOccurs="unbounded">
 																			<xs:annotation>
 																				<xs:documentation>Informações das Unidades de Transporte (Carreta/Reboque/Vagão)</xs:documentation>
-																				<xs:documentation>Dispositivo de carga utilizada (Unit Load Device - ULD) significa todo tipo de contêiner de carga, vagão, contêiner de avião, palete de aeronave com rede ou palete de aeronave com rede sobre um iglu. </xs:documentation>
+																				<xs:documentation>Deve ser preenchido com as informações das unidades de transporte utilizadas.</xs:documentation>
 																			</xs:annotation>
 																		</xs:element>
 																		<xs:element name="infUnidCarga" type="TUnidCarga" minOccurs="0" maxOccurs="unbounded">
@@ -1536,7 +1536,7 @@ Opcional para Redespacho Intermediario e Serviço vinculado a multimodal.</xs:do
 																		<xs:element name="infUnidTransp" type="TUnidadeTransp" minOccurs="0" maxOccurs="unbounded">
 																			<xs:annotation>
 																				<xs:documentation>Informações das Unidades de Transporte (Carreta/Reboque/Vagão)</xs:documentation>
-																				<xs:documentation>Dispositivo de carga utilizada (Unit Load Device - ULD) significa todo tipo de contêiner de carga, vagão, contêiner de avião, palete de aeronave com rede ou palete de aeronave com rede sobre um iglu. </xs:documentation>
+																				<xs:documentation>Deve ser preenchido com as informações das unidades de transporte utilizadas.</xs:documentation>
 																			</xs:annotation>
 																		</xs:element>
 																		<xs:element name="infUnidCarga" type="TUnidCarga" minOccurs="0" maxOccurs="unbounded">
@@ -1615,7 +1615,7 @@ Opcional para Redespacho Intermediario e Serviço vinculado a multimodal.</xs:do
 																		<xs:element name="infUnidTransp" type="TUnidadeTransp" minOccurs="0" maxOccurs="unbounded">
 																			<xs:annotation>
 																				<xs:documentation>Informações das Unidades de Transporte (Carreta/Reboque/Vagão)</xs:documentation>
-																				<xs:documentation>Dispositivo de carga utilizada (Unit Load Device - ULD) significa todo tipo de contêiner de carga, vagão, contêiner de avião, palete de aeronave com rede ou palete de aeronave com rede sobre um iglu. </xs:documentation>
+																				<xs:documentation>Deve ser preenchido com as informações das unidades de transporte utilizadas.</xs:documentation>
 																			</xs:annotation>
 																		</xs:element>
 																		<xs:element name="infUnidCarga" type="TUnidCarga" minOccurs="0" maxOccurs="unbounded">
@@ -2161,12 +2161,20 @@ Onde v9.99 é a a designação genérica para a versão do arquivo. Por exemplo,
 																		</xs:annotation>
 																		<xs:complexType>
 																			<xs:sequence>
-																				<xs:element name="CNPJ" type="TCnpj">
-																					<xs:annotation>
-																						<xs:documentation>CNPJ do Emitente</xs:documentation>
-																						<xs:documentation>Informar o CNPJ do emitente do Documento Fiscal</xs:documentation>
-																					</xs:annotation>
-																				</xs:element>
+																				<xs:choice>
+																					<xs:element name="CNPJ" type="TCnpj">
+																						<xs:annotation>
+																							<xs:documentation>CNPJ do Emitente</xs:documentation>
+																							<xs:documentation>Informar o CNPJ do emitente do Documento Fiscal</xs:documentation>
+																						</xs:annotation>
+																					</xs:element>
+																					<xs:element name="CPF" type="TCpf">
+																						<xs:annotation>
+																							<xs:documentation>Número do CPF</xs:documentation>
+																							<xs:documentation>Informar o CPF do emitente do documento fiscal</xs:documentation>
+																						</xs:annotation>
+																					</xs:element>
+																				</xs:choice>
 																				<xs:element name="mod" type="TModDoc">
 																					<xs:annotation>
 																						<xs:documentation>Modelo do Documento Fiscal</xs:documentation>
@@ -2249,73 +2257,6 @@ Onde v9.99 é a a designação genérica para a versão do arquivo. Por exemplo,
 												<xs:documentation>Chave do CT-e complementado</xs:documentation>
 											</xs:annotation>
 										</xs:element>
-										<xs:element name="vPresComp">
-											<xs:annotation>
-												<xs:documentation>Valores da prestação de serviço</xs:documentation>
-											</xs:annotation>
-											<xs:complexType>
-												<xs:sequence>
-													<xs:element name="vTPrest" type="TDec_1302">
-														<xs:annotation>
-															<xs:documentation>Valor Total da Prestação de Serviço Complementado</xs:documentation>
-														</xs:annotation>
-													</xs:element>
-													<xs:sequence>
-														<xs:element name="compComp" minOccurs="0" maxOccurs="unbounded">
-															<xs:annotation>
-																<xs:documentation>Componentes do valor da prestação</xs:documentation>
-															</xs:annotation>
-															<xs:complexType>
-																<xs:sequence>
-																	<xs:element name="xNome">
-																		<xs:annotation>
-																			<xs:documentation>Nome do componente</xs:documentation>
-																		</xs:annotation>
-																		<xs:simpleType>
-																			<xs:restriction base="TString">
-																				<xs:maxLength value="15"/>
-																				<xs:minLength value="1"/>
-																			</xs:restriction>
-																		</xs:simpleType>
-																	</xs:element>
-																	<xs:element name="vComp" type="TDec_1302">
-																		<xs:annotation>
-																			<xs:documentation>Valor do componente</xs:documentation>
-																		</xs:annotation>
-																	</xs:element>
-																</xs:sequence>
-															</xs:complexType>
-														</xs:element>
-													</xs:sequence>
-												</xs:sequence>
-											</xs:complexType>
-										</xs:element>
-										<xs:element name="impComp">
-											<xs:annotation>
-												<xs:documentation>Iinformações relativas aos Impostos complementados</xs:documentation>
-											</xs:annotation>
-											<xs:complexType>
-												<xs:sequence>
-													<xs:element name="ICMSComp" type="TImp"/>
-													<xs:element name="vTotTrib" type="TDec_1302" minOccurs="0">
-														<xs:annotation>
-															<xs:documentation>Valor Total dos Tributos</xs:documentation>
-														</xs:annotation>
-													</xs:element>
-													<xs:element name="infAdFisco" minOccurs="0">
-														<xs:annotation>
-															<xs:documentation>Informações adicionais de interesse do Fisco</xs:documentation>
-														</xs:annotation>
-														<xs:simpleType>
-															<xs:restriction base="TString">
-																<xs:maxLength value="1000"/>
-																<xs:minLength value="1"/>
-															</xs:restriction>
-														</xs:simpleType>
-													</xs:element>
-												</xs:sequence>
-											</xs:complexType>
-										</xs:element>
 									</xs:sequence>
 								</xs:complexType>
 							</xs:element>
@@ -2344,11 +2285,35 @@ Onde v9.99 é a a designação genérica para a versão do arquivo. Por exemplo,
 								</xs:complexType>
 							</xs:element>
 						</xs:choice>
+						<xs:element name="autXML" minOccurs="0" maxOccurs="10">
+							<xs:annotation>
+								<xs:documentation>Autorizados para download do XML do DF-e</xs:documentation>
+								<xs:documentation>Informar CNPJ ou CPF. Preencher os zeros não significativos.</xs:documentation>
+							</xs:annotation>
+							<xs:complexType>
+								<xs:sequence>
+									<xs:choice>
+										<xs:element name="CNPJ" type="TCnpj">
+											<xs:annotation>
+												<xs:documentation>CNPJ do autorizado</xs:documentation>
+												<xs:documentation>Informar zeros não significativos</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="CPF" type="TCpf">
+											<xs:annotation>
+												<xs:documentation>CPF do autorizado</xs:documentation>
+												<xs:documentation>Informar zeros não significativos</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+									</xs:choice>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
 					</xs:sequence>
 					<xs:attribute name="versao" use="required">
 						<xs:annotation>
 							<xs:documentation>Versão do leiaute</xs:documentation>
-							<xs:documentation>Ex: "1.04"</xs:documentation>
+							<xs:documentation>Ex: "2.00"</xs:documentation>
 						</xs:annotation>
 						<xs:simpleType>
 							<xs:restriction base="TVerCTe"/>
@@ -3241,6 +3206,9 @@ Onde v9.99 é a a designação genérica para a versão do arquivo. Por exemplo,
 			<xs:element name="idUnidTransp" type="TContainer">
 				<xs:annotation>
 					<xs:documentation>Identificação da Unidade de Transporte</xs:documentation>
+					<xs:documentation>Informar a identificação conforme o tipo de unidade de transporte.
+Por exemplo: para rodoviário tração ou reboque deverá preencher com a placa do veículo.
+</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="lacUnidTransp" minOccurs="0" maxOccurs="unbounded">
@@ -3293,6 +3261,7 @@ Onde v9.99 é a a designação genérica para a versão do arquivo. Por exemplo,
 			<xs:element name="idUnidCarga" type="TContainer">
 				<xs:annotation>
 					<xs:documentation>Identificação da Unidade de Carga</xs:documentation>
+					<xs:documentation>Informar a identificação da unidade de carga, por exemplo: número do container.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="lacUnidCarga" minOccurs="0" maxOccurs="unbounded">
@@ -3634,6 +3603,20 @@ Onde v9.99 é a a designação genérica para a versão do arquivo. Por exemplo,
 			<xs:enumeration value="55"/>
 		</xs:restriction>
 	</xs:simpleType>
+	<xs:simpleType name="TModTransp">
+		<xs:annotation>
+			<xs:documentation> Tipo Modal transporte</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:whiteSpace value="preserve"/>
+			<xs:enumeration value="01"/>
+			<xs:enumeration value="02"/>
+			<xs:enumeration value="03"/>
+			<xs:enumeration value="04"/>
+			<xs:enumeration value="05"/>
+			<xs:enumeration value="06"/>
+		</xs:restriction>
+	</xs:simpleType>
 	<xs:simpleType name="TProcEmi">
 		<xs:annotation>
 			<xs:documentation>Tipo processo de emissão do CT-e</xs:documentation>
@@ -3657,7 +3640,7 @@ Onde v9.99 é a a designação genérica para a versão do arquivo. Por exemplo,
 	</xs:simpleType>
 	<xs:simpleType name="TVerCTe">
 		<xs:annotation>
-			<xs:documentation>Tipo Versão do CT-e - 1.04</xs:documentation>
+			<xs:documentation>Tipo Versão do CT-e - 2.00</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:whiteSpace value="preserve"/>

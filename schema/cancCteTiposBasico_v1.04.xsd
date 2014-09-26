@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns="http://www.portalfiscal.inf.br/cte" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.portalfiscal.inf.br/cte" elementFormDefault="qualified" attributeFormDefault="unqualified">
 	<xs:import namespace="http://www.w3.org/2000/09/xmldsig#" schemaLocation="xmldsig-core-schema_v1.01.xsd"/>
-	<xs:include schemaLocation="tiposGeralCTe_v1.03.xsd"/>
+	<xs:include schemaLocation="tiposGeralCTe_v1.04.xsd"/>
 	<xs:complexType name="TCancCTe">
 		<xs:annotation>
 			<xs:documentation>Tipo Pedido de Cancelamento de CT-e</xs:documentation>
@@ -104,7 +104,7 @@
 						</xs:element>
 						<xs:element name="nProt" type="TProt" minOccurs="0">
 							<xs:annotation>
-								<xs:documentation>Número do Protocolo de homologação do cancelamento: 1 posição tipo de autorizador (1 – Secretaria de Fazenda Estadual 2 – Receita Federal - SCAN, 3 - SEFAZ Virtual RFB ); 2 posições ano; 10 seqüencial no ano.</xs:documentation>
+								<xs:documentation>Número do Protocolo de homologação do cancelamento: 1 posição tipo de autorizador (1 – Secretaria de Fazenda Estadual, 3 - SEFAZ Virtual RS, 5 - SEFAZ Virtual SP ); 2 posições ano; 10 seqüencial no ano.</xs:documentation>
 							</xs:annotation>
 						</xs:element>
 					</xs:sequence>
@@ -127,10 +127,10 @@
 	</xs:complexType>
 	<xs:simpleType name="TVerCancCTe">
 		<xs:annotation>
-			<xs:documentation> Tipo Versão de cancela CT-e - 1.03</xs:documentation>
+			<xs:documentation> Tipo Versão de cancela CT-e - 1.04</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
-			<xs:pattern value="1\.03"/>
+			<xs:pattern value="1\.04"/>
 		</xs:restriction>
 	</xs:simpleType>
 </xs:schema>

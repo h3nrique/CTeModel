@@ -1,21 +1,21 @@
 parsing a schema...
-[WARNING] java.io.FileNotFoundException: /home/paulo.alves/git/CTeModel/schema/cancCTeTiposBasico_v1.03.xsd (No such file or directory)
-  line 3 of file:/home/paulo.alves/git/CTeModel/schema/cancCte_v1.03.xsd
+[WARNING] java.io.FileNotFoundException: /home/paulo.alves/git/CTeModel/schema/cancCTeTiposBasico_v1.04.xsd (No such file or directory)
+  line 3 of file:/home/paulo.alves/git/CTeModel/schema/cancCte_v1.04.xsd
 
-[WARNING] java.io.FileNotFoundException: /home/paulo.alves/git/CTeModel/schema/consSitCTeTiposBasico_v1.03.xsd (No such file or directory)
-  line 3 of file:/home/paulo.alves/git/CTeModel/schema/consSitCte_v1.03.xsd
+[WARNING] java.io.FileNotFoundException: /home/paulo.alves/git/CTeModel/schema/consSitCTeTiposBasico_v1.04.xsd (No such file or directory)
+  line 3 of file:/home/paulo.alves/git/CTeModel/schema/consSitCte_v1.04.xsd
 
-[WARNING] java.io.FileNotFoundException: /home/paulo.alves/git/CTeModel/schema/cancCTeTiposBasico_v1.03.xsd (No such file or directory)
-  line 3 of file:/home/paulo.alves/git/CTeModel/schema/procCancCTe_v1.03.xsd
+[WARNING] java.io.FileNotFoundException: /home/paulo.alves/git/CTeModel/schema/cancCTeTiposBasico_v1.04.xsd (No such file or directory)
+  line 3 of file:/home/paulo.alves/git/CTeModel/schema/procCancCTe_v1.04.xsd
 
-[WARNING] java.io.FileNotFoundException: /home/paulo.alves/git/CTeModel/schema/inutCTeTiposBasico_v1.03.xsd (No such file or directory)
-  line 3 of file:/home/paulo.alves/git/CTeModel/schema/procInutCTe_v1.03.xsd
+[WARNING] java.io.FileNotFoundException: /home/paulo.alves/git/CTeModel/schema/inutCTeTiposBasico_v1.04.xsd (No such file or directory)
+  line 3 of file:/home/paulo.alves/git/CTeModel/schema/procInutCTe_v1.04.xsd
 
-[WARNING] java.io.FileNotFoundException: /home/paulo.alves/git/CTeModel/schema/cancCTeTiposBasico_v1.03.xsd (No such file or directory)
-  line 3 of file:/home/paulo.alves/git/CTeModel/schema/retCancCte_v1.03.xsd
+[WARNING] java.io.FileNotFoundException: /home/paulo.alves/git/CTeModel/schema/cancCTeTiposBasico_v1.04.xsd (No such file or directory)
+  line 3 of file:/home/paulo.alves/git/CTeModel/schema/retCancCte_v1.04.xsd
 
-[WARNING] java.io.FileNotFoundException: /home/paulo.alves/git/CTeModel/schema/consSitCTeTiposBasico_v1.03.xsd (No such file or directory)
-  line 3 of file:/home/paulo.alves/git/CTeModel/schema/retConsSitCte_v1.03.xsd
+[WARNING] java.io.FileNotFoundException: /home/paulo.alves/git/CTeModel/schema/consSitCTeTiposBasico_v1.04.xsd (No such file or directory)
+  line 3 of file:/home/paulo.alves/git/CTeModel/schema/retConsSitCte_v1.04.xsd
 
 compiling a schema...
 org/w3/_2000/_09/xmldsig/KeyInfoType.java
@@ -28,9 +28,13 @@ org/w3/_2000/_09/xmldsig/TransformType.java
 org/w3/_2000/_09/xmldsig/TransformsType.java
 org/w3/_2000/_09/xmldsig/X509DataType.java
 org/w3/_2000/_09/xmldsig/package-info.java
+br/inf/portalfiscal/cte/Aereo.java
+br/inf/portalfiscal/cte/Aquav.java
 br/inf/portalfiscal/cte/CteProc.java
+br/inf/portalfiscal/cte/Duto.java
+br/inf/portalfiscal/cte/Ferrov.java
 br/inf/portalfiscal/cte/ObjectFactory.java
-br/inf/portalfiscal/cte/TCST.java
+br/inf/portalfiscal/cte/Rodo.java
 br/inf/portalfiscal/cte/TCTe.java
 br/inf/portalfiscal/cte/TCancCTe.java
 br/inf/portalfiscal/cte/TConsReciCTe.java
@@ -43,6 +47,7 @@ br/inf/portalfiscal/cte/TEnderFer.java
 br/inf/portalfiscal/cte/TEndereco.java
 br/inf/portalfiscal/cte/TEndernac.java
 br/inf/portalfiscal/cte/TEnviCTe.java
+br/inf/portalfiscal/cte/TImp.java
 br/inf/portalfiscal/cte/TInutCTe.java
 br/inf/portalfiscal/cte/TLocal.java
 br/inf/portalfiscal/cte/TProcCancCTe.java
@@ -54,5 +59,6 @@ br/inf/portalfiscal/cte/TRetConsSitCTe.java
 br/inf/portalfiscal/cte/TRetConsStatServ.java
 br/inf/portalfiscal/cte/TRetEnviCTe.java
 br/inf/portalfiscal/cte/TRetInutCTe.java
+br/inf/portalfiscal/cte/TUFSemEX.java
 br/inf/portalfiscal/cte/TUf.java
 br/inf/portalfiscal/cte/package-info.java

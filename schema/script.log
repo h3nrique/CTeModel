@@ -1,41 +1,58 @@
 parsing a schema...
-[WARNING] schema_reference.4: Failed to read schema document 'tiposBasicoCte_v1.02.xsd', because 1) could not find the document; 2) the document could not be read; 3) the root element of the document is not <xsd:schema>.
-  line 4 of file:/home/paulo.alves/git/CTeModel/schema/cancCteTiposBasico_v1.01.xsd
+[WARNING] java.io.FileNotFoundException: /home/paulo.alves/git/CTeModel/schema/cancCTeTiposBasico_v1.03.xsd (No such file or directory)
+  line 3 of file:/home/paulo.alves/git/CTeModel/schema/cancCte_v1.03.xsd
 
-[ERROR] src-resolve: Cannot resolve the name 'TAmb' to a(n) 'type definition' component.
-  line 16 of file:/home/paulo.alves/git/CTeModel/schema/cancCteTiposBasico_v1.01.xsd
+[WARNING] java.io.FileNotFoundException: /home/paulo.alves/git/CTeModel/schema/consSitCTeTiposBasico_v1.03.xsd (No such file or directory)
+  line 3 of file:/home/paulo.alves/git/CTeModel/schema/consSitCte_v1.03.xsd
 
-[ERROR] src-resolve: Cannot resolve the name 'TServ' to a(n) 'type definition' component.
-  line 23 of file:/home/paulo.alves/git/CTeModel/schema/cancCteTiposBasico_v1.01.xsd
+[WARNING] java.io.FileNotFoundException: /home/paulo.alves/git/CTeModel/schema/cancCTeTiposBasico_v1.03.xsd (No such file or directory)
+  line 3 of file:/home/paulo.alves/git/CTeModel/schema/procCancCTe_v1.03.xsd
 
-[ERROR] src-resolve: Cannot resolve the name 'TChNFe' to a(n) 'type definition' component.
-  line 28 of file:/home/paulo.alves/git/CTeModel/schema/cancCteTiposBasico_v1.01.xsd
+[WARNING] java.io.FileNotFoundException: /home/paulo.alves/git/CTeModel/schema/inutCTeTiposBasico_v1.03.xsd (No such file or directory)
+  line 3 of file:/home/paulo.alves/git/CTeModel/schema/procInutCTe_v1.03.xsd
 
-[ERROR] src-resolve: Cannot resolve the name 'TProt' to a(n) 'type definition' component.
-  line 33 of file:/home/paulo.alves/git/CTeModel/schema/cancCteTiposBasico_v1.01.xsd
+[WARNING] java.io.FileNotFoundException: /home/paulo.alves/git/CTeModel/schema/cancCTeTiposBasico_v1.03.xsd (No such file or directory)
+  line 3 of file:/home/paulo.alves/git/CTeModel/schema/retCancCte_v1.03.xsd
 
-[ERROR] src-resolve: Cannot resolve the name 'TJust' to a(n) 'type definition' component.
-  line 38 of file:/home/paulo.alves/git/CTeModel/schema/cancCteTiposBasico_v1.01.xsd
+[WARNING] java.io.FileNotFoundException: /home/paulo.alves/git/CTeModel/schema/consSitCTeTiposBasico_v1.03.xsd (No such file or directory)
+  line 3 of file:/home/paulo.alves/git/CTeModel/schema/retConsSitCte_v1.03.xsd
 
-[ERROR] src-resolve: Cannot resolve the name 'TAmb' to a(n) 'type definition' component.
-  line 62 of file:/home/paulo.alves/git/CTeModel/schema/cancCteTiposBasico_v1.01.xsd
-
-[ERROR] src-resolve: Cannot resolve the name 'TCodUfIBGE' to a(n) 'type definition' component.
-  line 69 of file:/home/paulo.alves/git/CTeModel/schema/cancCteTiposBasico_v1.01.xsd
-
-[ERROR] src-resolve: Cannot resolve the name 'TVerAplic' to a(n) 'type definition' component.
-  line 74 of file:/home/paulo.alves/git/CTeModel/schema/cancCteTiposBasico_v1.01.xsd
-
-[ERROR] src-resolve: Cannot resolve the name 'TStat' to a(n) 'type definition' component.
-  line 79 of file:/home/paulo.alves/git/CTeModel/schema/cancCteTiposBasico_v1.01.xsd
-
-[ERROR] src-resolve: Cannot resolve the name 'TMotivo' to a(n) 'type definition' component.
-  line 84 of file:/home/paulo.alves/git/CTeModel/schema/cancCteTiposBasico_v1.01.xsd
-
-[ERROR] src-resolve: Cannot resolve the name 'TChNFe' to a(n) 'type definition' component.
-  line 89 of file:/home/paulo.alves/git/CTeModel/schema/cancCteTiposBasico_v1.01.xsd
-
-[ERROR] src-resolve: Cannot resolve the name 'TProt' to a(n) 'type definition' component.
-  line 99 of file:/home/paulo.alves/git/CTeModel/schema/cancCteTiposBasico_v1.01.xsd
-
-Failed to parse a schema.
+compiling a schema...
+org/w3/_2000/_09/xmldsig/KeyInfoType.java
+org/w3/_2000/_09/xmldsig/ObjectFactory.java
+org/w3/_2000/_09/xmldsig/ReferenceType.java
+org/w3/_2000/_09/xmldsig/SignatureType.java
+org/w3/_2000/_09/xmldsig/SignatureValueType.java
+org/w3/_2000/_09/xmldsig/SignedInfoType.java
+org/w3/_2000/_09/xmldsig/TransformType.java
+org/w3/_2000/_09/xmldsig/TransformsType.java
+org/w3/_2000/_09/xmldsig/X509DataType.java
+org/w3/_2000/_09/xmldsig/package-info.java
+br/inf/portalfiscal/cte/CteProc.java
+br/inf/portalfiscal/cte/ObjectFactory.java
+br/inf/portalfiscal/cte/TCST.java
+br/inf/portalfiscal/cte/TCTe.java
+br/inf/portalfiscal/cte/TCancCTe.java
+br/inf/portalfiscal/cte/TConsReciCTe.java
+br/inf/portalfiscal/cte/TConsSitCTe.java
+br/inf/portalfiscal/cte/TConsStatServ.java
+br/inf/portalfiscal/cte/TEndOrg.java
+br/inf/portalfiscal/cte/TEndReEnt.java
+br/inf/portalfiscal/cte/TEndeEmi.java
+br/inf/portalfiscal/cte/TEnderFer.java
+br/inf/portalfiscal/cte/TEndereco.java
+br/inf/portalfiscal/cte/TEndernac.java
+br/inf/portalfiscal/cte/TEnviCTe.java
+br/inf/portalfiscal/cte/TInutCTe.java
+br/inf/portalfiscal/cte/TLocal.java
+br/inf/portalfiscal/cte/TProcCancCTe.java
+br/inf/portalfiscal/cte/TProcInutCTe.java
+br/inf/portalfiscal/cte/TProtCTe.java
+br/inf/portalfiscal/cte/TRetCancCTe.java
+br/inf/portalfiscal/cte/TRetConsReciCTe.java
+br/inf/portalfiscal/cte/TRetConsSitCTe.java
+br/inf/portalfiscal/cte/TRetConsStatServ.java
+br/inf/portalfiscal/cte/TRetEnviCTe.java
+br/inf/portalfiscal/cte/TRetInutCTe.java
+br/inf/portalfiscal/cte/TUf.java
+br/inf/portalfiscal/cte/package-info.java

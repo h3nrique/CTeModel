@@ -1,0 +1,41 @@
+parsing a schema...
+[WARNING] schema_reference.4: Failed to read schema document 'tiposBasicoCte_v1.02.xsd', because 1) could not find the document; 2) the document could not be read; 3) the root element of the document is not <xsd:schema>.
+  line 4 of file:/home/paulo.alves/git/CTeModel/schema/cancCteTiposBasico_v1.01.xsd
+
+[ERROR] src-resolve: Cannot resolve the name 'TAmb' to a(n) 'type definition' component.
+  line 16 of file:/home/paulo.alves/git/CTeModel/schema/cancCteTiposBasico_v1.01.xsd
+
+[ERROR] src-resolve: Cannot resolve the name 'TServ' to a(n) 'type definition' component.
+  line 23 of file:/home/paulo.alves/git/CTeModel/schema/cancCteTiposBasico_v1.01.xsd
+
+[ERROR] src-resolve: Cannot resolve the name 'TChNFe' to a(n) 'type definition' component.
+  line 28 of file:/home/paulo.alves/git/CTeModel/schema/cancCteTiposBasico_v1.01.xsd
+
+[ERROR] src-resolve: Cannot resolve the name 'TProt' to a(n) 'type definition' component.
+  line 33 of file:/home/paulo.alves/git/CTeModel/schema/cancCteTiposBasico_v1.01.xsd
+
+[ERROR] src-resolve: Cannot resolve the name 'TJust' to a(n) 'type definition' component.
+  line 38 of file:/home/paulo.alves/git/CTeModel/schema/cancCteTiposBasico_v1.01.xsd
+
+[ERROR] src-resolve: Cannot resolve the name 'TAmb' to a(n) 'type definition' component.
+  line 62 of file:/home/paulo.alves/git/CTeModel/schema/cancCteTiposBasico_v1.01.xsd
+
+[ERROR] src-resolve: Cannot resolve the name 'TCodUfIBGE' to a(n) 'type definition' component.
+  line 69 of file:/home/paulo.alves/git/CTeModel/schema/cancCteTiposBasico_v1.01.xsd
+
+[ERROR] src-resolve: Cannot resolve the name 'TVerAplic' to a(n) 'type definition' component.
+  line 74 of file:/home/paulo.alves/git/CTeModel/schema/cancCteTiposBasico_v1.01.xsd
+
+[ERROR] src-resolve: Cannot resolve the name 'TStat' to a(n) 'type definition' component.
+  line 79 of file:/home/paulo.alves/git/CTeModel/schema/cancCteTiposBasico_v1.01.xsd
+
+[ERROR] src-resolve: Cannot resolve the name 'TMotivo' to a(n) 'type definition' component.
+  line 84 of file:/home/paulo.alves/git/CTeModel/schema/cancCteTiposBasico_v1.01.xsd
+
+[ERROR] src-resolve: Cannot resolve the name 'TChNFe' to a(n) 'type definition' component.
+  line 89 of file:/home/paulo.alves/git/CTeModel/schema/cancCteTiposBasico_v1.01.xsd
+
+[ERROR] src-resolve: Cannot resolve the name 'TProt' to a(n) 'type definition' component.
+  line 99 of file:/home/paulo.alves/git/CTeModel/schema/cancCteTiposBasico_v1.01.xsd
+
+Failed to parse a schema.

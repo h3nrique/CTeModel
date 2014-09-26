@@ -29,7 +29,7 @@
 											<xs:documentation>Código numérico que compõe a Chave de Acesso. Número aleatório gerado pelo emitente para cada CT-e.</xs:documentation>
 										</xs:annotation>
 										<xs:simpleType>
-											<xs:restriction base="xs:string">
+											<xs:restriction base="xs:token">
 												<xs:pattern value="[0-9]{9}"/>
 											</xs:restriction>
 										</xs:simpleType>
@@ -44,7 +44,7 @@
 											<xs:documentation>Descrição da Natureza da Operação</xs:documentation>
 										</xs:annotation>
 										<xs:simpleType>
-											<xs:restriction base="xs:string">
+											<xs:restriction base="xs:token">
 												<xs:minLength value="1"/>
 												<xs:maxLength value="60"/>
 											</xs:restriction>
@@ -58,7 +58,7 @@
 2 - outros</xs:documentation>
 										</xs:annotation>
 										<xs:simpleType>
-											<xs:restriction base="xs:string">
+											<xs:restriction base="xs:token">
 												<xs:enumeration value="0"/>
 												<xs:enumeration value="1"/>
 												<xs:enumeration value="2"/>
@@ -96,7 +96,7 @@
 											<xs:documentation>Formato de impressão do DACTE (1 - Retrato; 2 - Paisagem)</xs:documentation>
 										</xs:annotation>
 										<xs:simpleType>
-											<xs:restriction base="xs:string">
+											<xs:restriction base="xs:token">
 												<xs:enumeration value="1"/>
 												<xs:enumeration value="2"/>
 											</xs:restriction>
@@ -108,7 +108,7 @@
 (1 - Normal; 2 DANFE de Contingência, emitido em formulário de segurança)</xs:documentation>
 										</xs:annotation>
 										<xs:simpleType>
-											<xs:restriction base="xs:string">
+											<xs:restriction base="xs:token">
 												<xs:enumeration value="1"/>
 												<xs:enumeration value="2"/>
 											</xs:restriction>
@@ -119,7 +119,7 @@
 											<xs:documentation>Digito Verificador da Chave de Acesso da CT-e</xs:documentation>
 										</xs:annotation>
 										<xs:simpleType>
-											<xs:restriction base="xs:string">
+											<xs:restriction base="xs:token">
 												<xs:pattern value="[0-9]{1}"/>
 											</xs:restriction>
 										</xs:simpleType>
@@ -151,7 +151,7 @@
 											<xs:documentation>Identificador da versão do processo de emissão (informar a versão do aplicativo emissor de CT-e).</xs:documentation>
 										</xs:annotation>
 										<xs:simpleType>
-											<xs:restriction base="xs:string">
+											<xs:restriction base="xs:token">
 												<xs:minLength value="1"/>
 												<xs:maxLength value="20"/>
 											</xs:restriction>
@@ -172,7 +172,7 @@
 											<xs:documentation>Nome do Município onde o CT-e está sendo emitido</xs:documentation>
 										</xs:annotation>
 										<xs:simpleType>
-											<xs:restriction base="xs:string">
+											<xs:restriction base="xs:token">
 												<xs:minLength value="1"/>
 												<xs:maxLength value="60"/>
 											</xs:restriction>
@@ -201,7 +201,7 @@
 3 - Redespacho Intermediário</xs:documentation>
 										</xs:annotation>
 										<xs:simpleType>
-											<xs:restriction base="xs:string">
+											<xs:restriction base="xs:token">
 												<xs:enumeration value="0"/>
 												<xs:enumeration value="1"/>
 												<xs:enumeration value="2"/>
@@ -219,7 +219,7 @@
 											<xs:documentation>Nome do Município do inicio da prestação</xs:documentation>
 										</xs:annotation>
 										<xs:simpleType>
-											<xs:restriction base="xs:string">
+											<xs:restriction base="xs:token">
 												<xs:minLength value="1"/>
 												<xs:maxLength value="60"/>
 											</xs:restriction>
@@ -240,7 +240,7 @@
 											<xs:documentation>Nome do Município do término da prestação</xs:documentation>
 										</xs:annotation>
 										<xs:simpleType>
-											<xs:restriction base="xs:string">
+											<xs:restriction base="xs:token">
 												<xs:minLength value="1"/>
 												<xs:maxLength value="60"/>
 											</xs:restriction>
@@ -258,7 +258,7 @@
 1 - não</xs:documentation>
 										</xs:annotation>
 										<xs:simpleType>
-											<xs:restriction base="xs:string">
+											<xs:restriction base="xs:token">
 												<xs:enumeration value="0"/>
 												<xs:enumeration value="1"/>
 											</xs:restriction>
@@ -269,7 +269,7 @@
 											<xs:documentation>Detalhes do retira</xs:documentation>
 										</xs:annotation>
 										<xs:simpleType>
-											<xs:restriction base="xs:string">
+											<xs:restriction base="xs:token">
 												<xs:minLength value="1"/>
 												<xs:maxLength value="160"/>
 											</xs:restriction>
@@ -288,7 +288,7 @@
 3 - Destinatário</xs:documentation>
 														</xs:annotation>
 														<xs:simpleType>
-															<xs:restriction base="xs:string">
+															<xs:restriction base="xs:token">
 																<xs:enumeration value="0"/>
 																<xs:enumeration value="1"/>
 																<xs:enumeration value="2"/>
@@ -308,7 +308,7 @@
 4 - Outros</xs:documentation>
 														</xs:annotation>
 														<xs:simpleType>
-															<xs:restriction base="xs:string">
+															<xs:restriction base="xs:token">
 																<xs:enumeration value="4"/>
 															</xs:restriction>
 														</xs:simpleType>
@@ -388,7 +388,7 @@
 											<xs:documentation>Característica adicional do transporte</xs:documentation>
 										</xs:annotation>
 										<xs:simpleType>
-											<xs:restriction base="xs:string">
+											<xs:restriction base="xs:token">
 												<xs:minLength value="1"/>
 												<xs:maxLength value="15"/>
 											</xs:restriction>
@@ -399,7 +399,7 @@
 											<xs:documentation>Característica adicional do serviço</xs:documentation>
 										</xs:annotation>
 										<xs:simpleType>
-											<xs:restriction base="xs:string">
+											<xs:restriction base="xs:token">
 												<xs:minLength value="1"/>
 												<xs:maxLength value="30"/>
 											</xs:restriction>
@@ -411,7 +411,7 @@
 </xs:documentation>
 										</xs:annotation>
 										<xs:simpleType>
-											<xs:restriction base="xs:string">
+											<xs:restriction base="xs:token">
 												<xs:minLength value="1"/>
 												<xs:maxLength value="20"/>
 											</xs:restriction>
@@ -430,7 +430,7 @@
 														<xs:documentation>Sigla ou código interno da Filial/Porto/Estação/Aeroporto de Origem</xs:documentation>
 													</xs:annotation>
 													<xs:simpleType>
-														<xs:restriction base="xs:string">
+														<xs:restriction base="xs:token">
 															<xs:minLength value="1"/>
 															<xs:maxLength value="15"/>
 														</xs:restriction>
@@ -445,7 +445,7 @@
 </xs:documentation>
 																</xs:annotation>
 																<xs:simpleType>
-																	<xs:restriction base="xs:string">
+																	<xs:restriction base="xs:token">
 																		<xs:minLength value="1"/>
 																		<xs:maxLength value="15"/>
 																	</xs:restriction>
@@ -459,7 +459,7 @@
 														<xs:documentation>Sigla ou código interno da Filial/Porto/Estação/Aeroporto de Destino</xs:documentation>
 													</xs:annotation>
 													<xs:simpleType>
-														<xs:restriction base="xs:string">
+														<xs:restriction base="xs:token">
 															<xs:minLength value="1"/>
 															<xs:maxLength value="15"/>
 														</xs:restriction>
@@ -470,7 +470,7 @@
 														<xs:documentation>Código da Rota de Entrega</xs:documentation>
 													</xs:annotation>
 													<xs:simpleType>
-														<xs:restriction base="xs:string">
+														<xs:restriction base="xs:token">
 															<xs:minLength value="1"/>
 															<xs:maxLength value="10"/>
 														</xs:restriction>
@@ -497,7 +497,7 @@
 																		<xs:documentation>0- Sem data definida</xs:documentation>
 																	</xs:annotation>
 																	<xs:simpleType>
-																		<xs:restriction base="xs:string">
+																		<xs:restriction base="xs:token">
 																			<xs:enumeration value="0"/>
 																		</xs:restriction>
 																	</xs:simpleType>
@@ -516,7 +516,7 @@
 </xs:documentation>
 																	</xs:annotation>
 																	<xs:simpleType>
-																		<xs:restriction base="xs:string">
+																		<xs:restriction base="xs:token">
 																			<xs:enumeration value="1"/>
 																			<xs:enumeration value="2"/>
 																			<xs:enumeration value="3"/>
@@ -540,7 +540,7 @@
 </xs:documentation>
 																	</xs:annotation>
 																	<xs:simpleType>
-																		<xs:restriction base="xs:string">
+																		<xs:restriction base="xs:token">
 																			<xs:enumeration value="4"/>
 																		</xs:restriction>
 																	</xs:simpleType>
@@ -568,7 +568,7 @@
 																		<xs:documentation>0- Sem hora definida</xs:documentation>
 																	</xs:annotation>
 																	<xs:simpleType>
-																		<xs:restriction base="xs:string">
+																		<xs:restriction base="xs:token">
 																			<xs:enumeration value="0"/>
 																		</xs:restriction>
 																	</xs:simpleType>
@@ -586,7 +586,7 @@
 3-A partir do horário</xs:documentation>
 																	</xs:annotation>
 																	<xs:simpleType>
-																		<xs:restriction base="xs:string">
+																		<xs:restriction base="xs:token">
 																			<xs:pattern value="1"/>
 																			<xs:pattern value="2"/>
 																			<xs:pattern value="3"/>
@@ -614,7 +614,7 @@
 </xs:documentation>
 																	</xs:annotation>
 																	<xs:simpleType>
-																		<xs:restriction base="xs:string">
+																		<xs:restriction base="xs:token">
 																			<xs:enumeration value="4"/>
 																		</xs:restriction>
 																	</xs:simpleType>
@@ -641,7 +641,7 @@
 											<xs:documentation>Município de origem para efeito de cálculo do frete</xs:documentation>
 										</xs:annotation>
 										<xs:simpleType>
-											<xs:restriction base="xs:string">
+											<xs:restriction base="xs:token">
 												<xs:minLength value="1"/>
 												<xs:maxLength value="40"/>
 											</xs:restriction>
@@ -652,7 +652,7 @@
 											<xs:documentation>Município de destino para efeito de cálculo do frete</xs:documentation>
 										</xs:annotation>
 										<xs:simpleType>
-											<xs:restriction base="xs:string">
+											<xs:restriction base="xs:token">
 												<xs:minLength value="1"/>
 												<xs:maxLength value="40"/>
 											</xs:restriction>
@@ -688,7 +688,7 @@ e o conteúdo do campo no XTexto</xs:documentation>
 											</xs:sequence>
 											<xs:attribute name="xCampo" use="required">
 												<xs:simpleType>
-													<xs:restriction base="xs:string">
+													<xs:restriction base="xs:token">
 														<xs:minLength value="1"/>
 														<xs:maxLength value="20"/>
 													</xs:restriction>
@@ -716,7 +716,7 @@ e o conteúdo do campo no XTexto
 											</xs:sequence>
 											<xs:attribute name="xCampo" use="required">
 												<xs:simpleType>
-													<xs:restriction base="xs:string">
+													<xs:restriction base="xs:token">
 														<xs:minLength value="1"/>
 														<xs:maxLength value="20"/>
 													</xs:restriction>
@@ -850,7 +850,7 @@ e o conteúdo do campo no XTexto
 </xs:documentation>
 														</xs:annotation>
 														<xs:simpleType>
-															<xs:restriction base="xs:string">
+															<xs:restriction base="xs:token">
 																<xs:minLength value="1"/>
 																<xs:maxLength value="20"/>
 															</xs:restriction>
@@ -862,7 +862,7 @@ e o conteúdo do campo no XTexto
 </xs:documentation>
 														</xs:annotation>
 														<xs:simpleType>
-															<xs:restriction base="xs:string">
+															<xs:restriction base="xs:token">
 																<xs:minLength value="1"/>
 																<xs:maxLength value="20"/>
 															</xs:restriction>
@@ -873,7 +873,7 @@ e o conteúdo do campo no XTexto
 															<xs:documentation>Séirie</xs:documentation>
 														</xs:annotation>
 														<xs:simpleType>
-															<xs:restriction base="xs:string">
+															<xs:restriction base="xs:token">
 																<xs:minLength value="1"/>
 																<xs:maxLength value="3"/>
 															</xs:restriction>
@@ -884,7 +884,7 @@ e o conteúdo do campo no XTexto
 															<xs:documentation>Número </xs:documentation>
 														</xs:annotation>
 														<xs:simpleType>
-															<xs:restriction base="xs:string">
+															<xs:restriction base="xs:token">
 																<xs:minLength value="1"/>
 																<xs:maxLength value="20"/>
 															</xs:restriction>
@@ -913,7 +913,7 @@ e o conteúdo do campo no XTexto
 													</xs:element>
 													<xs:element name="PIN" minOccurs="0">
 														<xs:simpleType>
-															<xs:restriction base="xs:string">
+															<xs:restriction base="xs:token">
 																<xs:minLength value="2"/>
 																<xs:maxLength value="9"/>
 																<xs:pattern value="[1-9]{1}[0-9]{1,8}"/>
@@ -941,7 +941,7 @@ e o conteúdo do campo no XTexto
 													</xs:element>
 													<xs:element name="PIN" minOccurs="0">
 														<xs:simpleType>
-															<xs:restriction base="xs:string">
+															<xs:restriction base="xs:token">
 																<xs:minLength value="2"/>
 																<xs:maxLength value="9"/>
 																<xs:pattern value="[1-9]{1}[0-9]{1,8}"/>
@@ -964,7 +964,7 @@ e o conteúdo do campo no XTexto
 99-Outros</xs:documentation>
 														</xs:annotation>
 														<xs:simpleType>
-															<xs:restriction base="xs:string">
+															<xs:restriction base="xs:token">
 																<xs:enumeration value="00"/>
 																<xs:enumeration value="99"/>
 															</xs:restriction>
@@ -980,7 +980,7 @@ e o conteúdo do campo no XTexto
 															<xs:documentation>Número </xs:documentation>
 														</xs:annotation>
 														<xs:simpleType>
-															<xs:restriction base="xs:string">
+															<xs:restriction base="xs:token">
 																<xs:minLength value="1"/>
 																<xs:maxLength value="20"/>
 															</xs:restriction>
@@ -1159,7 +1159,7 @@ e o conteúdo do campo no XTexto
 											<xs:documentation>Inscrição na SUFRAMA (Obrigatório nas operações com as áreas com benefícios de incentivos fiscais sob controle da SUFRAMA)</xs:documentation>
 										</xs:annotation>
 										<xs:simpleType>
-											<xs:restriction base="xs:string">
+											<xs:restriction base="xs:token">
 												<xs:minLength value="1"/>
 												<xs:maxLength value="9"/>
 											</xs:restriction>
@@ -1205,7 +1205,7 @@ e o conteúdo do campo no XTexto
 														<xs:documentation>Nome do componente</xs:documentation>
 													</xs:annotation>
 													<xs:simpleType>
-														<xs:restriction base="xs:string">
+														<xs:restriction base="xs:token">
 															<xs:maxLength value="15"/>
 															<xs:minLength value="1"/>
 														</xs:restriction>
@@ -1243,7 +1243,7 @@ e o conteúdo do campo no XTexto
 00 - tributação normal ICMS</xs:documentation>
 																</xs:annotation>
 																<xs:simpleType>
-																	<xs:restriction base="xs:string">
+																	<xs:restriction base="xs:token">
 																		<xs:enumeration value="00"/>
 																	</xs:restriction>
 																</xs:simpleType>
@@ -1278,7 +1278,7 @@ e o conteúdo do campo no XTexto
 20 - tributação com BC reduzida do ICMS</xs:documentation>
 																</xs:annotation>
 																<xs:simpleType>
-																	<xs:restriction base="xs:string">
+																	<xs:restriction base="xs:token">
 																		<xs:enumeration value="20"/>
 																	</xs:restriction>
 																</xs:simpleType>
@@ -1319,7 +1319,7 @@ e o conteúdo do campo no XTexto
 51 - ICMS diferido</xs:documentation>
 																</xs:annotation>
 																<xs:simpleType>
-																	<xs:restriction base="xs:string">
+																	<xs:restriction base="xs:token">
 																		<xs:enumeration value="40"/>
 																		<xs:enumeration value="41"/>
 																		<xs:enumeration value="51"/>
@@ -1340,7 +1340,7 @@ e o conteúdo do campo no XTexto
 																	<xs:documentation>80 - recolhimeento do ICMS por ST</xs:documentation>
 																</xs:annotation>
 																<xs:simpleType>
-																	<xs:restriction base="xs:string">
+																	<xs:restriction base="xs:token">
 																		<xs:enumeration value="80"/>
 																	</xs:restriction>
 																</xs:simpleType>
@@ -1380,7 +1380,7 @@ e o conteúdo do campo no XTexto
 81- ICMS devido à Outra UF de início da prestação</xs:documentation>
 																</xs:annotation>
 																<xs:simpleType>
-																	<xs:restriction base="xs:string">
+																	<xs:restriction base="xs:token">
 																		<xs:enumeration value="81"/>
 																	</xs:restriction>
 																</xs:simpleType>
@@ -1419,7 +1419,7 @@ e o conteúdo do campo no XTexto
 																	<xs:documentation>90 - ICMS outros</xs:documentation>
 																</xs:annotation>
 																<xs:simpleType>
-																	<xs:restriction base="xs:string">
+																	<xs:restriction base="xs:token">
 																		<xs:enumeration value="90"/>
 																	</xs:restriction>
 																</xs:simpleType>
@@ -1493,7 +1493,7 @@ e o conteúdo do campo no XTexto
 															<xs:documentation>Produto predominante</xs:documentation>
 														</xs:annotation>
 														<xs:simpleType>
-															<xs:restriction base="xs:string">
+															<xs:restriction base="xs:token">
 																<xs:minLength value="1"/>
 																<xs:maxLength value="60"/>
 															</xs:restriction>
@@ -1504,7 +1504,7 @@ e o conteúdo do campo no XTexto
 															<xs:documentation>Outras características da carga</xs:documentation>
 														</xs:annotation>
 														<xs:simpleType>
-															<xs:restriction base="xs:string">
+															<xs:restriction base="xs:token">
 																<xs:minLength value="1"/>
 																<xs:maxLength value="30"/>
 															</xs:restriction>
@@ -1526,7 +1526,7 @@ e o conteúdo do campo no XTexto
 04-LITROS;.</xs:documentation>
 																	</xs:annotation>
 																	<xs:simpleType>
-																		<xs:restriction base="xs:string">
+																		<xs:restriction base="xs:token">
 																			<xs:enumeration value="00"/>
 																			<xs:enumeration value="01"/>
 																			<xs:enumeration value="02"/>
@@ -1542,7 +1542,7 @@ PESO BRUTO, PESO DECLARADO, PESO CUBADO, PESO AFORADO, PESO AFERIDO, PESO BASE D
 </xs:documentation>
 																	</xs:annotation>
 																	<xs:simpleType>
-																		<xs:restriction base="xs:string">
+																		<xs:restriction base="xs:token">
 																			<xs:minLength value="1"/>
 																			<xs:maxLength value="20"/>
 																		</xs:restriction>
@@ -1570,7 +1570,7 @@ PESO BRUTO, PESO DECLARADO, PESO CUBADO, PESO AFORADO, PESO AFERIDO, PESO BASE D
 															<xs:documentation>número do conatiner</xs:documentation>
 														</xs:annotation>
 														<xs:simpleType>
-															<xs:restriction base="xs:string">
+															<xs:restriction base="xs:token">
 																<xs:minLength value="1"/>
 																<xs:maxLength value="20"/>
 															</xs:restriction>
@@ -1587,7 +1587,7 @@ PESO BRUTO, PESO DECLARADO, PESO CUBADO, PESO AFORADO, PESO AFERIDO, PESO BASE D
 																		<xs:documentation>número do lacre</xs:documentation>
 																	</xs:annotation>
 																	<xs:simpleType>
-																		<xs:restriction base="xs:string">
+																		<xs:restriction base="xs:token">
 																			<xs:minLength value="1"/>
 																			<xs:maxLength value="20"/>
 																		</xs:restriction>
@@ -1687,7 +1687,7 @@ PESO BRUTO, PESO DECLARADO, PESO CUBADO, PESO AFORADO, PESO AFERIDO, PESO BASE D
 																								<xs:documentation>Série do Documento Fiscal</xs:documentation>
 																							</xs:annotation>
 																							<xs:simpleType>
-																								<xs:restriction base="xs:string">
+																								<xs:restriction base="xs:token">
 																									<xs:minLength value="1"/>
 																									<xs:maxLength value="3"/>
 																								</xs:restriction>
@@ -1698,7 +1698,7 @@ PESO BRUTO, PESO DECLARADO, PESO CUBADO, PESO AFORADO, PESO AFERIDO, PESO BASE D
 																								<xs:documentation>Série do Documento Fiscal</xs:documentation>
 																							</xs:annotation>
 																							<xs:simpleType>
-																								<xs:restriction base="xs:string">
+																								<xs:restriction base="xs:token">
 																									<xs:minLength value="1"/>
 																									<xs:maxLength value="2"/>
 																								</xs:restriction>
@@ -1709,7 +1709,7 @@ PESO BRUTO, PESO DECLARADO, PESO CUBADO, PESO AFORADO, PESO AFERIDO, PESO BASE D
 																								<xs:documentation>Número do Documento Fiscal</xs:documentation>
 																							</xs:annotation>
 																							<xs:simpleType>
-																								<xs:restriction base="xs:string">
+																								<xs:restriction base="xs:token">
 																									<xs:minLength value="1"/>
 																									<xs:maxLength value="20"/>
 																									<xs:pattern value="[0-9]{1,20}"/>
@@ -1763,7 +1763,7 @@ PESO BRUTO, PESO DECLARADO, PESO CUBADO, PESO AFORADO, PESO AFERIDO, PESO BASE D
 5 - Tomador de Serviço.</xs:documentation>
 														</xs:annotation>
 														<xs:simpleType>
-															<xs:restriction base="xs:string">
+															<xs:restriction base="xs:token">
 																<xs:enumeration value="0"/>
 																<xs:enumeration value="1"/>
 																<xs:enumeration value="2"/>
@@ -1778,7 +1778,7 @@ PESO BRUTO, PESO DECLARADO, PESO CUBADO, PESO AFORADO, PESO AFERIDO, PESO BASE D
 															<xs:documentation>nome da seguradora</xs:documentation>
 														</xs:annotation>
 														<xs:simpleType>
-															<xs:restriction base="xs:string">
+															<xs:restriction base="xs:token">
 																<xs:minLength value="1"/>
 																<xs:maxLength value="30"/>
 															</xs:restriction>
@@ -1789,7 +1789,7 @@ PESO BRUTO, PESO DECLARADO, PESO CUBADO, PESO AFORADO, PESO AFERIDO, PESO BASE D
 															<xs:documentation>número da Apólice</xs:documentation>
 														</xs:annotation>
 														<xs:simpleType>
-															<xs:restriction base="xs:string">
+															<xs:restriction base="xs:token">
 																<xs:minLength value="1"/>
 																<xs:maxLength value="20"/>
 															</xs:restriction>
@@ -1800,7 +1800,7 @@ PESO BRUTO, PESO DECLARADO, PESO CUBADO, PESO AFORADO, PESO AFERIDO, PESO BASE D
 															<xs:documentation>Número da Averbação</xs:documentation>
 														</xs:annotation>
 														<xs:simpleType>
-															<xs:restriction base="xs:string">
+															<xs:restriction base="xs:token">
 																<xs:length value="20"/>
 															</xs:restriction>
 														</xs:simpleType>
@@ -1826,7 +1826,7 @@ PESO BRUTO, PESO DECLARADO, PESO CUBADO, PESO AFORADO, PESO AFERIDO, PESO BASE D
 																<xs:documentation>Registro obrigatório do emitente do CT-e junto à ANTT para exercer a atividade de transportador rodoviário de cargas por conta de terceiros e mediante remuneração.</xs:documentation>
 															</xs:annotation>
 															<xs:simpleType>
-																<xs:restriction base="xs:string">
+																<xs:restriction base="xs:token">
 																	<xs:pattern value="[0-9]{14}"/>
 																</xs:restriction>
 															</xs:simpleType>
@@ -1841,7 +1841,7 @@ PESO BRUTO, PESO DECLARADO, PESO CUBADO, PESO AFORADO, PESO AFERIDO, PESO BASE D
 																<xs:documentation>0 - Não, 1 - Sim Obs. Será lotação quando houver apenas 1 tomador do serviço por veículo, ou combinação veicular, e por viagem</xs:documentation>
 															</xs:annotation>
 															<xs:simpleType>
-																<xs:restriction base="xs:string">
+																<xs:restriction base="xs:token">
 																	<xs:enumeration value="0"/>
 																	<xs:enumeration value="1"/>
 																</xs:restriction>
@@ -1858,7 +1858,7 @@ PESO BRUTO, PESO DECLARADO, PESO CUBADO, PESO AFORADO, PESO AFERIDO, PESO BASE D
 																			<xs:documentation>Série da CTRB</xs:documentation>
 																		</xs:annotation>
 																		<xs:simpleType>
-																			<xs:restriction base="xs:string">
+																			<xs:restriction base="xs:token">
 																				<xs:pattern value="[1-9]{1}[0-9]{0,2}"/>
 																			</xs:restriction>
 																		</xs:simpleType>
@@ -1869,7 +1869,7 @@ PESO BRUTO, PESO DECLARADO, PESO CUBADO, PESO AFORADO, PESO AFERIDO, PESO BASE D
 </xs:documentation>
 																		</xs:annotation>
 																		<xs:simpleType>
-																			<xs:restriction base="xs:string">
+																			<xs:restriction base="xs:token">
 																				<xs:pattern value="[1-9]{1}[0-9]{0,5}"/>
 																			</xs:restriction>
 																		</xs:simpleType>
@@ -1888,7 +1888,7 @@ PESO BRUTO, PESO DECLARADO, PESO CUBADO, PESO AFORADO, PESO AFERIDO, PESO BASE D
 																			<xs:documentation>Série da OCC</xs:documentation>
 																		</xs:annotation>
 																		<xs:simpleType>
-																			<xs:restriction base="xs:string">
+																			<xs:restriction base="xs:token">
 																				<xs:minLength value="1"/>
 																				<xs:maxLength value="3"/>
 																			</xs:restriction>
@@ -1900,7 +1900,7 @@ PESO BRUTO, PESO DECLARADO, PESO CUBADO, PESO AFORADO, PESO AFERIDO, PESO BASE D
 </xs:documentation>
 																		</xs:annotation>
 																		<xs:simpleType>
-																			<xs:restriction base="xs:string">
+																			<xs:restriction base="xs:token">
 																				<xs:pattern value="[1-9]{1}[0-9]{0,5}"/>
 																			</xs:restriction>
 																		</xs:simpleType>
@@ -1923,7 +1923,7 @@ PESO BRUTO, PESO DECLARADO, PESO CUBADO, PESO AFORADO, PESO AFERIDO, PESO BASE D
 																						<xs:documentation>Código interno de uso da transportadora (Ex.: sigla da filial emitente)</xs:documentation>
 																					</xs:annotation>
 																					<xs:simpleType>
-																						<xs:restriction base="xs:string">
+																						<xs:restriction base="xs:token">
 																							<xs:minLength value="1"/>
 																							<xs:maxLength value="10"/>
 																						</xs:restriction>
@@ -1944,7 +1944,7 @@ PESO BRUTO, PESO DECLARADO, PESO CUBADO, PESO AFORADO, PESO AFERIDO, PESO BASE D
 																						<xs:documentation>Telefone</xs:documentation>
 																					</xs:annotation>
 																					<xs:simpleType>
-																						<xs:restriction base="xs:string">
+																						<xs:restriction base="xs:token">
 																							<xs:minLength value="7"/>
 																							<xs:maxLength value="12"/>
 																						</xs:restriction>
@@ -1967,7 +1967,7 @@ PESO BRUTO, PESO DECLARADO, PESO CUBADO, PESO AFORADO, PESO AFERIDO, PESO BASE D
 																			<xs:documentation>Número do Certificado do Regime Especial que permite que o Vale Pedágio não seja pago antecipadamente</xs:documentation>
 																		</xs:annotation>
 																		<xs:simpleType>
-																			<xs:restriction base="xs:string">
+																			<xs:restriction base="xs:token">
 																				<xs:maxLength value="9"/>
 																				<xs:minLength value="5"/>
 																			</xs:restriction>
@@ -1983,7 +1983,7 @@ PESO BRUTO, PESO DECLARADO, PESO CUBADO, PESO AFORADO, PESO AFERIDO, PESO BASE D
 																			<xs:documentation>0-emitente do CT-e, 1-remetente, 2-expedidor, 3-recebedor, 4-destinatário, 5-Tomador do Serviço</xs:documentation>
 																		</xs:annotation>
 																		<xs:simpleType>
-																			<xs:restriction base="xs:string">
+																			<xs:restriction base="xs:token">
 																				<xs:enumeration value="0"/>
 																				<xs:enumeration value="1"/>
 																				<xs:enumeration value="2"/>
@@ -2008,7 +2008,7 @@ PESO BRUTO, PESO DECLARADO, PESO CUBADO, PESO AFORADO, PESO AFERIDO, PESO BASE D
 </xs:documentation>
 																					</xs:annotation>
 																					<xs:simpleType>
-																						<xs:restriction base="xs:string">
+																						<xs:restriction base="xs:token">
 																							<xs:enumeration value="1"/>
 																							<xs:enumeration value="2"/>
 																							<xs:enumeration value="3"/>
@@ -2020,7 +2020,7 @@ PESO BRUTO, PESO DECLARADO, PESO CUBADO, PESO AFORADO, PESO AFERIDO, PESO BASE D
 																						<xs:documentation>Empresa fornecedora do Vale Pedágio, ou seja, empresa que fornece ao Responsável pelo Pagamento do Vale Pedágio os dispositivos do Vale Pedágio.</xs:documentation>
 																					</xs:annotation>
 																					<xs:simpleType>
-																						<xs:restriction base="xs:string">
+																						<xs:restriction base="xs:token">
 																							<xs:minLength value="1"/>
 																							<xs:maxLength value="30"/>
 																						</xs:restriction>
@@ -2036,7 +2036,7 @@ PESO BRUTO, PESO DECLARADO, PESO CUBADO, PESO AFORADO, PESO AFERIDO, PESO BASE D
 																						<xs:documentation>Número do cartão ou do TAG. Dispensado para o caso de uso de Ticket em papel</xs:documentation>
 																					</xs:annotation>
 																					<xs:simpleType>
-																						<xs:restriction base="xs:string">
+																						<xs:restriction base="xs:token">
 																							<xs:minLength value="1"/>
 																							<xs:maxLength value="20"/>
 																						</xs:restriction>
@@ -2047,7 +2047,7 @@ PESO BRUTO, PESO DECLARADO, PESO CUBADO, PESO AFORADO, PESO AFERIDO, PESO BASE D
 																						<xs:documentation>Número de ordem do comprovante de compra do Vale Pedágio fornecido para cada veículo ou combinação veicular, por viagem.</xs:documentation>
 																					</xs:annotation>
 																					<xs:simpleType>
-																						<xs:restriction base="xs:string">
+																						<xs:restriction base="xs:token">
 																							<xs:minLength value="1"/>
 																							<xs:maxLength value="14"/>
 																						</xs:restriction>
@@ -2068,7 +2068,7 @@ PESO BRUTO, PESO DECLARADO, PESO CUBADO, PESO AFORADO, PESO AFERIDO, PESO BASE D
 																				<xs:documentation>Código interno do veículo </xs:documentation>
 																			</xs:annotation>
 																			<xs:simpleType>
-																				<xs:restriction base="xs:string">
+																				<xs:restriction base="xs:token">
 																					<xs:minLength value="1"/>
 																					<xs:maxLength value="10"/>
 																				</xs:restriction>
@@ -2079,7 +2079,7 @@ PESO BRUTO, PESO DECLARADO, PESO CUBADO, PESO AFORADO, PESO AFERIDO, PESO BASE D
 																				<xs:documentation>Código interno do veículo </xs:documentation>
 																			</xs:annotation>
 																			<xs:simpleType>
-																				<xs:restriction base="xs:string">
+																				<xs:restriction base="xs:token">
 																					<xs:length value="9"/>
 																				</xs:restriction>
 																			</xs:simpleType>
@@ -2089,7 +2089,7 @@ PESO BRUTO, PESO DECLARADO, PESO CUBADO, PESO AFORADO, PESO AFERIDO, PESO BASE D
 																				<xs:documentation>placa do veículo </xs:documentation>
 																			</xs:annotation>
 																			<xs:simpleType>
-																				<xs:restriction base="xs:string"/>
+																				<xs:restriction base="xs:token"/>
 																			</xs:simpleType>
 																		</xs:element>
 																		<xs:element name="tara">
@@ -2097,7 +2097,7 @@ PESO BRUTO, PESO DECLARADO, PESO CUBADO, PESO AFORADO, PESO AFERIDO, PESO BASE D
 																				<xs:documentation>tara em KG</xs:documentation>
 																			</xs:annotation>
 																			<xs:simpleType>
-																				<xs:restriction base="xs:string">
+																				<xs:restriction base="xs:token">
 																					<xs:pattern value="0|[1-9]{1}[0-9]{0,5}"/>
 																				</xs:restriction>
 																			</xs:simpleType>
@@ -2107,7 +2107,7 @@ PESO BRUTO, PESO DECLARADO, PESO CUBADO, PESO AFORADO, PESO AFERIDO, PESO BASE D
 																				<xs:documentation>capacidade em KG</xs:documentation>
 																			</xs:annotation>
 																			<xs:simpleType>
-																				<xs:restriction base="xs:string">
+																				<xs:restriction base="xs:token">
 																					<xs:pattern value="0|[1-9]{1}[0-9]{0,5}"/>
 																				</xs:restriction>
 																			</xs:simpleType>
@@ -2117,7 +2117,7 @@ PESO BRUTO, PESO DECLARADO, PESO CUBADO, PESO AFORADO, PESO AFERIDO, PESO BASE D
 																				<xs:documentation>capacidade em M3</xs:documentation>
 																			</xs:annotation>
 																			<xs:simpleType>
-																				<xs:restriction base="xs:string">
+																				<xs:restriction base="xs:token">
 																					<xs:pattern value="0|[1-9]{1}[0-9]{0,2}"/>
 																				</xs:restriction>
 																			</xs:simpleType>
@@ -2130,7 +2130,7 @@ T- terceiro.
 Será próprio quando o proprietário, co-proprietário ou arrendatário do veículo for o  Emitente do CT-e, caso contrário será caracterizado como  de propriedade de Terceiro</xs:documentation>
 																			</xs:annotation>
 																			<xs:simpleType>
-																				<xs:restriction base="xs:string">
+																				<xs:restriction base="xs:token">
 																					<xs:enumeration value="P"/>
 																					<xs:enumeration value="T"/>
 																				</xs:restriction>
@@ -2143,7 +2143,7 @@ Será próprio quando o proprietário, co-proprietário ou arrendatário do veí
 1-Reboque</xs:documentation>
 																			</xs:annotation>
 																			<xs:simpleType>
-																				<xs:restriction base="xs:string">
+																				<xs:restriction base="xs:token">
 																					<xs:enumeration value="0"/>
 																					<xs:enumeration value="1"/>
 																				</xs:restriction>
@@ -2161,7 +2161,7 @@ Será próprio quando o proprietário, co-proprietário ou arrendatário do veí
 06 - Outros.</xs:documentation>
 																			</xs:annotation>
 																			<xs:simpleType>
-																				<xs:restriction base="xs:string">
+																				<xs:restriction base="xs:token">
 																					<xs:enumeration value="00"/>
 																					<xs:enumeration value="01"/>
 																					<xs:enumeration value="02"/>
@@ -2183,7 +2183,7 @@ Será próprio quando o proprietário, co-proprietário ou arrendatário do veí
 05 - Sider</xs:documentation>
 																			</xs:annotation>
 																			<xs:simpleType>
-																				<xs:restriction base="xs:string">
+																				<xs:restriction base="xs:token">
 																					<xs:enumeration value="00"/>
 																					<xs:enumeration value="01"/>
 																					<xs:enumeration value="02"/>
@@ -2221,7 +2221,7 @@ Será próprio quando o proprietário, co-proprietário ou arrendatário do veí
 																							<xs:documentation>Registro obrigatório do proprietário, co-proprietário ou arrendatário do veículo junto à ANTT para exercer a atividade de transportador rodoviário de cargas por conta de terceiros e mediante remuneração.</xs:documentation>
 																						</xs:annotation>
 																						<xs:simpleType>
-																							<xs:restriction base="xs:string">
+																							<xs:restriction base="xs:token">
 																								<xs:maxLength value="14"/>
 																							</xs:restriction>
 																						</xs:simpleType>
@@ -2231,7 +2231,7 @@ Será próprio quando o proprietário, co-proprietário ou arrendatário do veí
 																							<xs:documentation>Razão Social ou Nome do remetente</xs:documentation>
 																						</xs:annotation>
 																						<xs:simpleType>
-																							<xs:restriction base="xs:string">
+																							<xs:restriction base="xs:token">
 																								<xs:maxLength value="60"/>
 																								<xs:minLength value="1"/>
 																							</xs:restriction>
@@ -2256,7 +2256,7 @@ Será próprio quando o proprietário, co-proprietário ou arrendatário do veí
 ou 2 – Outros.</xs:documentation>
 																						</xs:annotation>
 																						<xs:simpleType>
-																							<xs:restriction base="xs:string">
+																							<xs:restriction base="xs:token">
 																								<xs:enumeration value="0"/>
 																								<xs:enumeration value="1"/>
 																								<xs:enumeration value="2"/>
@@ -2281,7 +2281,7 @@ ou 2 – Outros.</xs:documentation>
 																			<xs:documentation>número do lacre</xs:documentation>
 																		</xs:annotation>
 																		<xs:simpleType>
-																			<xs:restriction base="xs:string">
+																			<xs:restriction base="xs:token">
 																				<xs:minLength value="1"/>
 																				<xs:maxLength value="20"/>
 																			</xs:restriction>
@@ -2301,7 +2301,7 @@ ou 2 – Outros.</xs:documentation>
 																			<xs:documentation>Nome do Motorista</xs:documentation>
 																		</xs:annotation>
 																		<xs:simpleType>
-																			<xs:restriction base="xs:string">
+																			<xs:restriction base="xs:token">
 																				<xs:maxLength value="60"/>
 																				<xs:minLength value="1"/>
 																			</xs:restriction>
@@ -2330,7 +2330,7 @@ ou 2 – Outros.</xs:documentation>
 																<xs:documentation>Número da Minuta</xs:documentation>
 															</xs:annotation>
 															<xs:simpleType>
-																<xs:restriction base="xs:string">
+																<xs:restriction base="xs:token">
 																	<xs:pattern value="[0-9]{9}"/>
 																</xs:restriction>
 															</xs:simpleType>
@@ -2340,7 +2340,7 @@ ou 2 – Outros.</xs:documentation>
 																<xs:documentation>Número da Operacional do Conhecimento Aéreo</xs:documentation>
 															</xs:annotation>
 															<xs:simpleType>
-																<xs:restriction base="xs:string">
+																<xs:restriction base="xs:token">
 																	<xs:pattern value="[0-9]{14}"/>
 																</xs:restriction>
 															</xs:simpleType>
@@ -2355,7 +2355,7 @@ ou 2 – Outros.</xs:documentation>
 																<xs:documentation>Loja Agente Emissor</xs:documentation>
 															</xs:annotation>
 															<xs:simpleType>
-																<xs:restriction base="xs:string">
+																<xs:restriction base="xs:token">
 																	<xs:maxLength value="20"/>
 																	<xs:minLength value="1"/>
 																</xs:restriction>
@@ -2366,7 +2366,7 @@ ou 2 – Outros.</xs:documentation>
 																<xs:documentation>código IATA</xs:documentation>
 															</xs:annotation>
 															<xs:simpleType>
-																<xs:restriction base="xs:string">
+																<xs:restriction base="xs:token">
 																	<xs:maxLength value="14"/>
 																	<xs:minLength value="1"/>
 																</xs:restriction>
@@ -2380,7 +2380,7 @@ ou 2 – Outros.</xs:documentation>
 																<xs:sequence>
 																	<xs:element name="trecho" minOccurs="0">
 																		<xs:simpleType>
-																			<xs:restriction base="xs:string">
+																			<xs:restriction base="xs:token">
 																				<xs:minLength value="1"/>
 																				<xs:maxLength value="7"/>
 																			</xs:restriction>
@@ -2388,7 +2388,7 @@ ou 2 – Outros.</xs:documentation>
 																	</xs:element>
 																	<xs:element name="CL" minOccurs="0">
 																		<xs:simpleType>
-																			<xs:restriction base="xs:string">
+																			<xs:restriction base="xs:token">
 																				<xs:minLength value="1"/>
 																				<xs:maxLength value="2"/>
 																			</xs:restriction>
@@ -2396,7 +2396,7 @@ ou 2 – Outros.</xs:documentation>
 																	</xs:element>
 																	<xs:element name="cTar" minOccurs="0">
 																		<xs:simpleType>
-																			<xs:restriction base="xs:string">
+																			<xs:restriction base="xs:token">
 																				<xs:minLength value="1"/>
 																				<xs:maxLength value="4"/>
 																			</xs:restriction>
@@ -2434,7 +2434,7 @@ ou 2 – Outros.</xs:documentation>
 																<xs:documentation>Número do Booking (reserva)</xs:documentation>
 															</xs:annotation>
 															<xs:simpleType>
-																<xs:restriction base="xs:string">
+																<xs:restriction base="xs:token">
 																	<xs:maxLength value="10"/>
 																	<xs:minLength value="1"/>
 																</xs:restriction>
@@ -2445,7 +2445,7 @@ ou 2 – Outros.</xs:documentation>
 																<xs:documentation>Número de Controle</xs:documentation>
 															</xs:annotation>
 															<xs:simpleType>
-																<xs:restriction base="xs:string">
+																<xs:restriction base="xs:token">
 																	<xs:maxLength value="10"/>
 																	<xs:minLength value="1"/>
 																</xs:restriction>
@@ -2467,7 +2467,7 @@ ou 2 – Outros.</xs:documentation>
 																<xs:documentation>Número da Viagem</xs:documentation>
 															</xs:annotation>
 															<xs:simpleType>
-																<xs:restriction base="xs:string">
+																<xs:restriction base="xs:token">
 																	<xs:pattern value=" [1-9]{1}[0-9]{0,9}"/>
 																</xs:restriction>
 															</xs:simpleType>
@@ -2477,7 +2477,7 @@ ou 2 – Outros.</xs:documentation>
 																<xs:documentation>Direção:N-Norte, L-Leste, S-Sul, O-Oeste  </xs:documentation>
 															</xs:annotation>
 															<xs:simpleType>
-																<xs:restriction base="xs:string">
+																<xs:restriction base="xs:token">
 																	<xs:enumeration value="N"/>
 																	<xs:enumeration value="S"/>
 																	<xs:enumeration value="L"/>
@@ -2490,7 +2490,7 @@ ou 2 – Outros.</xs:documentation>
 																<xs:documentation>Porto de Embarque</xs:documentation>
 															</xs:annotation>
 															<xs:simpleType>
-																<xs:restriction base="xs:string">
+																<xs:restriction base="xs:token">
 																	<xs:minLength value="1"/>
 																	<xs:maxLength value="60"/>
 																</xs:restriction>
@@ -2501,7 +2501,7 @@ ou 2 – Outros.</xs:documentation>
 																<xs:documentation>Porto de Transbordo</xs:documentation>
 															</xs:annotation>
 															<xs:simpleType>
-																<xs:restriction base="xs:string">
+																<xs:restriction base="xs:token">
 																	<xs:minLength value="1"/>
 																	<xs:maxLength value="60"/>
 																</xs:restriction>
@@ -2512,7 +2512,7 @@ ou 2 – Outros.</xs:documentation>
 																<xs:documentation>Porto de Destino</xs:documentation>
 															</xs:annotation>
 															<xs:simpleType>
-																<xs:restriction base="xs:string">
+																<xs:restriction base="xs:token">
 																	<xs:minLength value="1"/>
 																	<xs:maxLength value="60"/>
 																</xs:restriction>
@@ -2523,7 +2523,7 @@ ou 2 – Outros.</xs:documentation>
 																<xs:documentation>Tipo de Navegação:</xs:documentation>
 															</xs:annotation>
 															<xs:simpleType>
-																<xs:restriction base="xs:string">
+																<xs:restriction base="xs:token">
 																	<xs:enumeration value="0"/>
 																	<xs:enumeration value="1"/>
 																</xs:restriction>
@@ -2576,7 +2576,7 @@ ou 2 – Outros.</xs:documentation>
 0-Próprio,  1-Mútuo, 2- rodoferroviário ou 3-rodoviário.</xs:documentation>
 															</xs:annotation>
 															<xs:simpleType>
-																<xs:restriction base="xs:string">
+																<xs:restriction base="xs:token">
 																	<xs:enumeration value="0"/>
 																	<xs:enumeration value="1"/>
 																	<xs:enumeration value="2"/>
@@ -2590,7 +2590,7 @@ ou 2 – Outros.</xs:documentation>
 </xs:documentation>
 															</xs:annotation>
 															<xs:simpleType>
-																<xs:restriction base="xs:string">
+																<xs:restriction base="xs:token">
 																	<xs:minLength value="1"/>
 																	<xs:maxLength value="10"/>
 																</xs:restriction>
@@ -2601,13 +2601,13 @@ ou 2 – Outros.</xs:documentation>
 																<xs:documentation>Identificação do trem.</xs:documentation>
 															</xs:annotation>
 															<xs:simpleType>
-																<xs:restriction base="xs:string">
+																<xs:restriction base="xs:token">
 																	<xs:minLength value="1"/>
 																	<xs:maxLength value="7"/>
 																</xs:restriction>
 															</xs:simpleType>
 														</xs:element>
-														<xs:element name="vFrete" type="TDec_1203">
+														<xs:element name="vFrete" type="TDec_1302">
 															<xs:annotation>
 																<xs:documentation>Valor do Frete</xs:documentation>
 															</xs:annotation>
@@ -2628,7 +2628,7 @@ ou 2 – Outros.</xs:documentation>
 																			<xs:documentation>Código interno da Ferrovia Substituta</xs:documentation>
 																		</xs:annotation>
 																		<xs:simpleType>
-																			<xs:restriction base="xs:string">
+																			<xs:restriction base="xs:token">
 																				<xs:minLength value="1"/>
 																				<xs:maxLength value="10"/>
 																			</xs:restriction>
@@ -2669,7 +2669,7 @@ ou 2 – Outros.</xs:documentation>
 																			<xs:documentation>série da DCL</xs:documentation>
 																		</xs:annotation>
 																		<xs:simpleType>
-																			<xs:restriction base="xs:string">
+																			<xs:restriction base="xs:token">
 																				<xs:minLength value="1"/>
 																				<xs:maxLength value="3"/>
 																			</xs:restriction>
@@ -2680,7 +2680,7 @@ ou 2 – Outros.</xs:documentation>
 																			<xs:documentation>número da DCL</xs:documentation>
 																		</xs:annotation>
 																		<xs:simpleType>
-																			<xs:restriction base="xs:string">
+																			<xs:restriction base="xs:token">
 																				<xs:pattern value="[1-9]{1}[0-9]{0,19}"/>
 																			</xs:restriction>
 																		</xs:simpleType>
@@ -2695,32 +2695,32 @@ ou 2 – Outros.</xs:documentation>
 																			<xs:documentation>Quantidade de Vagões</xs:documentation>
 																		</xs:annotation>
 																		<xs:simpleType>
-																			<xs:restriction base="xs:string">
+																			<xs:restriction base="xs:token">
 																				<xs:pattern value="[1-9]{1}[0-9]{0,4}"/>
 																			</xs:restriction>
 																		</xs:simpleType>
 																	</xs:element>
-																	<xs:element name="pCalc" type="TDec_1203">
+																	<xs:element name="pCalc" type="TDec_1302">
 																		<xs:annotation>
 																			<xs:documentation>peso para cálculo em Toneladas (somatório dos pesos dos vagões)</xs:documentation>
 																		</xs:annotation>
 																	</xs:element>
-																	<xs:element name="vTar" type="TDec_1203">
+																	<xs:element name="vTar" type="TDec_1302">
 																		<xs:annotation>
 																			<xs:documentation>Valor da Tarifa</xs:documentation>
 																		</xs:annotation>
 																	</xs:element>
-																	<xs:element name="vFrete" type="TDec_1203">
+																	<xs:element name="vFrete" type="TDec_1302">
 																		<xs:annotation>
 																			<xs:documentation>Valor do Frete</xs:documentation>
 																		</xs:annotation>
 																	</xs:element>
-																	<xs:element name="vSAcess" type="TDec_1203">
+																	<xs:element name="vSAcess" type="TDec_1302">
 																		<xs:annotation>
 																			<xs:documentation>Valor dos Serviçso Acessórios</xs:documentation>
 																		</xs:annotation>
 																	</xs:element>
-																	<xs:element name="vTServ" type="TDec_1203">
+																	<xs:element name="vTServ" type="TDec_1302">
 																		<xs:annotation>
 																			<xs:documentation>Valor Total do Serviço (Valor do Frete + valor dos serviços)</xs:documentation>
 																		</xs:annotation>
@@ -2730,7 +2730,7 @@ ou 2 – Outros.</xs:documentation>
 																			<xs:documentation>Identificação do trem.</xs:documentation>
 																		</xs:annotation>
 																		<xs:simpleType>
-																			<xs:restriction base="xs:string">
+																			<xs:restriction base="xs:token">
 																				<xs:minLength value="1"/>
 																				<xs:maxLength value="7"/>
 																			</xs:restriction>
@@ -2747,7 +2747,7 @@ ou 2 – Outros.</xs:documentation>
 																						<xs:documentation>Número de Identificação do vagão</xs:documentation>
 																					</xs:annotation>
 																					<xs:simpleType>
-																						<xs:restriction base="xs:string">
+																						<xs:restriction base="xs:token">
 																							<xs:pattern value="[0-9]{8}"/>
 																						</xs:restriction>
 																					</xs:simpleType>
@@ -2762,7 +2762,7 @@ ou 2 – Outros.</xs:documentation>
 																						<xs:documentation>Tipo de Vagão</xs:documentation>
 																					</xs:annotation>
 																					<xs:simpleType>
-																						<xs:restriction base="xs:string">
+																						<xs:restriction base="xs:token">
 																							<xs:length value="3"/>
 																						</xs:restriction>
 																					</xs:simpleType>
@@ -2789,7 +2789,7 @@ ou 2 – Outros.</xs:documentation>
 																									<xs:documentation>número do lacre</xs:documentation>
 																								</xs:annotation>
 																								<xs:simpleType>
-																									<xs:restriction base="xs:string">
+																									<xs:restriction base="xs:token">
 																										<xs:minLength value="1"/>
 																										<xs:maxLength value="20"/>
 																									</xs:restriction>
@@ -2809,7 +2809,7 @@ ou 2 – Outros.</xs:documentation>
 																									<xs:documentation>Identificação do Container</xs:documentation>
 																								</xs:annotation>
 																								<xs:simpleType>
-																									<xs:restriction base="xs:string">
+																									<xs:restriction base="xs:token">
 																										<xs:pattern value="[1-9]{1}[0-9]{0,19}"/>
 																									</xs:restriction>
 																								</xs:simpleType>
@@ -2839,8 +2839,8 @@ ou 2 – Outros.</xs:documentation>
 																			<xs:documentation>Número de Identificação do vagão</xs:documentation>
 																		</xs:annotation>
 																		<xs:simpleType>
-																			<xs:restriction base="xs:string">
-																				<xs:pattern value="[1-9]{1}[0-9]{7}"/>
+																			<xs:restriction base="xs:token">
+																				<xs:pattern value="[0-9]{8}"/>
 																			</xs:restriction>
 																		</xs:simpleType>
 																	</xs:element>
@@ -2854,7 +2854,7 @@ ou 2 – Outros.</xs:documentation>
 																			<xs:documentation>Tipo de Vagão</xs:documentation>
 																		</xs:annotation>
 																		<xs:simpleType>
-																			<xs:restriction base="xs:string">
+																			<xs:restriction base="xs:token">
 																				<xs:length value="3"/>
 																			</xs:restriction>
 																		</xs:simpleType>
@@ -2881,7 +2881,7 @@ ou 2 – Outros.</xs:documentation>
 																						<xs:documentation>número do lacre</xs:documentation>
 																					</xs:annotation>
 																					<xs:simpleType>
-																						<xs:restriction base="xs:string">
+																						<xs:restriction base="xs:token">
 																							<xs:minLength value="1"/>
 																							<xs:maxLength value="20"/>
 																						</xs:restriction>
@@ -2901,7 +2901,7 @@ ou 2 – Outros.</xs:documentation>
 																						<xs:documentation>Identificação do Container</xs:documentation>
 																					</xs:annotation>
 																					<xs:simpleType>
-																						<xs:restriction base="xs:string">
+																						<xs:restriction base="xs:token">
 																							<xs:pattern value="[1-9]{1}[0-9]{0,19}"/>
 																						</xs:restriction>
 																					</xs:simpleType>
@@ -2946,7 +2946,7 @@ ou 2 – Outros.</xs:documentation>
 															<xs:documentation>Ver a legislação de transporte de produtos perigosos aplicadas ao modal</xs:documentation>
 														</xs:annotation>
 														<xs:simpleType>
-															<xs:restriction base="xs:string">
+															<xs:restriction base="xs:token">
 																<xs:pattern value="[1-9]{1}[0-9]{0,2}"/>
 															</xs:restriction>
 														</xs:simpleType>
@@ -2956,7 +2956,7 @@ ou 2 – Outros.</xs:documentation>
 															<xs:documentation>De 0 a 9999. Ver a legislação de transporte de produtos perigosos aplicadas ao modal  </xs:documentation>
 														</xs:annotation>
 														<xs:simpleType>
-															<xs:restriction base="xs:string">
+															<xs:restriction base="xs:token">
 																<xs:pattern value="[1-9]{1}[0-9]{0,3}"/>
 															</xs:restriction>
 														</xs:simpleType>
@@ -2966,7 +2966,7 @@ ou 2 – Outros.</xs:documentation>
 															<xs:documentation>Algarismo Romano. Ver a legislação de transporte de produtos perigosos aplicadas ao modal</xs:documentation>
 														</xs:annotation>
 														<xs:simpleType>
-															<xs:restriction base="xs:string">
+															<xs:restriction base="xs:token">
 																<xs:minLength value="1"/>
 																<xs:maxLength value="3"/>
 															</xs:restriction>
@@ -3008,7 +3008,7 @@ ou 2 – Outros.</xs:documentation>
 															<xs:documentation>Chassi do veículo</xs:documentation>
 														</xs:annotation>
 														<xs:simpleType>
-															<xs:restriction base="xs:string">
+															<xs:restriction base="xs:token">
 																<xs:length value="17"/>
 																<xs:pattern value="[A-Z0-9]+"/>
 															</xs:restriction>
@@ -3019,7 +3019,7 @@ ou 2 – Outros.</xs:documentation>
 															<xs:documentation>Cor do veículo (código de cada montadora)</xs:documentation>
 														</xs:annotation>
 														<xs:simpleType>
-															<xs:restriction base="xs:string">
+															<xs:restriction base="xs:token">
 																<xs:minLength value="1"/>
 																<xs:maxLength value="4"/>
 															</xs:restriction>
@@ -3030,7 +3030,7 @@ ou 2 – Outros.</xs:documentation>
 															<xs:documentation>Descrição da cor</xs:documentation>
 														</xs:annotation>
 														<xs:simpleType>
-															<xs:restriction base="xs:string">
+															<xs:restriction base="xs:token">
 																<xs:minLength value="1"/>
 																<xs:maxLength value="40"/>
 															</xs:restriction>
@@ -3041,7 +3041,7 @@ ou 2 – Outros.</xs:documentation>
 															<xs:documentation>Código Marca Modelo (utilizar tabela RENAVAM)</xs:documentation>
 														</xs:annotation>
 														<xs:simpleType>
-															<xs:restriction base="xs:string">
+															<xs:restriction base="xs:token">
 																<xs:minLength value="1"/>
 																<xs:maxLength value="6"/>
 															</xs:restriction>
@@ -3097,7 +3097,7 @@ ou 2 – Outros.</xs:documentation>
 																			<xs:documentation>Nome do componente</xs:documentation>
 																		</xs:annotation>
 																		<xs:simpleType>
-																			<xs:restriction base="xs:string">
+																			<xs:restriction base="xs:token">
 																				<xs:maxLength value="15"/>
 																				<xs:minLength value="1"/>
 																			</xs:restriction>
@@ -3136,7 +3136,7 @@ ou 2 – Outros.</xs:documentation>
 00 - tributação normal ICMS</xs:documentation>
 																				</xs:annotation>
 																				<xs:simpleType>
-																					<xs:restriction base="xs:string">
+																					<xs:restriction base="xs:token">
 																						<xs:enumeration value="00"/>
 																					</xs:restriction>
 																				</xs:simpleType>
@@ -3171,7 +3171,7 @@ ou 2 – Outros.</xs:documentation>
 20 - tributação com BC reduzida do ICMS</xs:documentation>
 																				</xs:annotation>
 																				<xs:simpleType>
-																					<xs:restriction base="xs:string">
+																					<xs:restriction base="xs:token">
 																						<xs:enumeration value="20"/>
 																					</xs:restriction>
 																				</xs:simpleType>
@@ -3212,7 +3212,7 @@ ou 2 – Outros.</xs:documentation>
 51 - ICMS diferido</xs:documentation>
 																				</xs:annotation>
 																				<xs:simpleType>
-																					<xs:restriction base="xs:string">
+																					<xs:restriction base="xs:token">
 																						<xs:enumeration value="03"/>
 																					</xs:restriction>
 																				</xs:simpleType>
@@ -3231,7 +3231,7 @@ ou 2 – Outros.</xs:documentation>
 																					<xs:documentation>80 - recolhimeento do ICMS por ST</xs:documentation>
 																				</xs:annotation>
 																				<xs:simpleType>
-																					<xs:restriction base="xs:string">
+																					<xs:restriction base="xs:token">
 																						<xs:enumeration value="80"/>
 																					</xs:restriction>
 																				</xs:simpleType>
@@ -3271,7 +3271,7 @@ ou 2 – Outros.</xs:documentation>
 81- ICMS devido à Outra UF de início da prestação</xs:documentation>
 																				</xs:annotation>
 																				<xs:simpleType>
-																					<xs:restriction base="xs:string">
+																					<xs:restriction base="xs:token">
 																						<xs:enumeration value="81"/>
 																					</xs:restriction>
 																				</xs:simpleType>
@@ -3310,7 +3310,7 @@ ou 2 – Outros.</xs:documentation>
 																					<xs:documentation>90 - ICMS outros</xs:documentation>
 																				</xs:annotation>
 																				<xs:simpleType>
-																					<xs:restriction base="xs:string">
+																					<xs:restriction base="xs:token">
 																						<xs:enumeration value="90"/>
 																					</xs:restriction>
 																				</xs:simpleType>
@@ -3611,7 +3611,7 @@ ou 2 – Outros.</xs:documentation>
 					<xs:documentation>CEP</xs:documentation>
 				</xs:annotation>
 				<xs:simpleType>
-					<xs:restriction base="xs:string">
+					<xs:restriction base="xs:token">
 						<xs:pattern value="[0-9]{8}"/>
 					</xs:restriction>
 				</xs:simpleType>
@@ -3626,7 +3626,7 @@ ou 2 – Outros.</xs:documentation>
 					<xs:documentation>Código do país</xs:documentation>
 				</xs:annotation>
 				<xs:simpleType>
-					<xs:restriction base="xs:string">
+					<xs:restriction base="xs:token">
 						<xs:pattern value="[0-9]{1,4}"/>
 					</xs:restriction>
 				</xs:simpleType>
@@ -3725,7 +3725,7 @@ ou 2 – Outros.</xs:documentation>
 					<xs:documentation>CEP</xs:documentation>
 				</xs:annotation>
 				<xs:simpleType>
-					<xs:restriction base="xs:string">
+					<xs:restriction base="xs:token">
 						<xs:pattern value="[0-9]{8}"/>
 					</xs:restriction>
 				</xs:simpleType>
@@ -3740,7 +3740,7 @@ ou 2 – Outros.</xs:documentation>
 					<xs:documentation>Código do país</xs:documentation>
 				</xs:annotation>
 				<xs:simpleType>
-					<xs:restriction base="xs:string">
+					<xs:restriction base="xs:token">
 						<xs:pattern value="[0-9]{1,4}"/>
 					</xs:restriction>
 				</xs:simpleType>
@@ -3828,7 +3828,7 @@ ou 2 – Outros.</xs:documentation>
 					<xs:documentation>CEP</xs:documentation>
 				</xs:annotation>
 				<xs:simpleType>
-					<xs:restriction base="xs:string">
+					<xs:restriction base="xs:token">
 						<xs:pattern value="[0-9]{8}"/>
 					</xs:restriction>
 				</xs:simpleType>
@@ -3910,7 +3910,7 @@ ou 2 – Outros.</xs:documentation>
 					<xs:documentation>CEP</xs:documentation>
 				</xs:annotation>
 				<xs:simpleType>
-					<xs:restriction base="xs:string">
+					<xs:restriction base="xs:token">
 						<xs:pattern value="[0-9]{8}"/>
 					</xs:restriction>
 				</xs:simpleType>
@@ -3992,7 +3992,7 @@ ou 2 – Outros.</xs:documentation>
 					<xs:documentation>CEP</xs:documentation>
 				</xs:annotation>
 				<xs:simpleType>
-					<xs:restriction base="xs:string">
+					<xs:restriction base="xs:token">
 						<xs:pattern value="[0-9]{8}"/>
 					</xs:restriction>
 				</xs:simpleType>
@@ -4007,7 +4007,7 @@ ou 2 – Outros.</xs:documentation>
 					<xs:documentation>Código do país</xs:documentation>
 				</xs:annotation>
 				<xs:simpleType>
-					<xs:restriction base="xs:string">
+					<xs:restriction base="xs:token">
 						<xs:pattern value="[0-9]{1,4}"/>
 					</xs:restriction>
 				</xs:simpleType>
@@ -4028,7 +4028,7 @@ ou 2 – Outros.</xs:documentation>
 					<xs:documentation>Telefone</xs:documentation>
 				</xs:annotation>
 				<xs:simpleType>
-					<xs:restriction base="xs:string">
+					<xs:restriction base="xs:token">
 						<xs:pattern value="[0-9]{7,10}"/>
 					</xs:restriction>
 				</xs:simpleType>
@@ -4162,7 +4162,7 @@ ou 2 – Outros.</xs:documentation>
 		<xs:annotation>
 			<xs:documentation>Tipo CFOP</xs:documentation>
 		</xs:annotation>
-		<xs:restriction base="xs:string">
+		<xs:restriction base="xs:token">
 			<xs:pattern value="[123567][0-9]([0-9][1-9]|[1-9][0-9])"/>
 		</xs:restriction>
 	</xs:simpleType>
@@ -4170,7 +4170,7 @@ ou 2 – Outros.</xs:documentation>
 		<xs:annotation>
 			<xs:documentation>Tipo Finalidade da CT-e</xs:documentation>
 		</xs:annotation>
-		<xs:restriction base="xs:string">
+		<xs:restriction base="xs:token">
 			<xs:enumeration value="0"/>
 			<xs:enumeration value="1"/>
 		</xs:restriction>
@@ -4179,7 +4179,7 @@ ou 2 – Outros.</xs:documentation>
 		<xs:annotation>
 			<xs:documentation>Tipo processo de emissão do CT-e</xs:documentation>
 		</xs:annotation>
-		<xs:restriction base="xs:string">
+		<xs:restriction base="xs:token">
 			<xs:enumeration value="0"/>
 			<xs:enumeration value="1"/>
 			<xs:enumeration value="2"/>
@@ -4190,7 +4190,7 @@ ou 2 – Outros.</xs:documentation>
 		<xs:annotation>
 			<xs:documentation>Tipo Código da Lista de Serviços LC 116/2003</xs:documentation>
 		</xs:annotation>
-		<xs:restriction base="xs:string">
+		<xs:restriction base="xs:token">
 			<xs:enumeration value="101"/>
 			<xs:enumeration value="102"/>
 			<xs:enumeration value="103"/>
@@ -4390,7 +4390,7 @@ ou 2 – Outros.</xs:documentation>
 		<xs:annotation>
 			<xs:documentation>Tipo Identificador de controle do envio do lote. Número seqüencial auto-incremental, de controle correspondente ao identificador único do lote enviado. A responsabilidade de gerar e controlar esse número é do próprio contribuinte.</xs:documentation>
 		</xs:annotation>
-		<xs:restriction base="xs:string">
+		<xs:restriction base="xs:token">
 			<xs:pattern value="[0-9]{1,15}"/>
 		</xs:restriction>
 	</xs:simpleType>
@@ -4398,7 +4398,7 @@ ou 2 – Outros.</xs:documentation>
 		<xs:annotation>
 			<xs:documentation> Tipo Modal transporte</xs:documentation>
 		</xs:annotation>
-		<xs:restriction base="xs:string">
+		<xs:restriction base="xs:token">
 			<xs:enumeration value="01"/>
 			<xs:enumeration value="02"/>
 			<xs:enumeration value="03"/>
@@ -4410,7 +4410,7 @@ ou 2 – Outros.</xs:documentation>
 		<xs:annotation>
 			<xs:documentation> Tipo Documento Associado</xs:documentation>
 		</xs:annotation>
-		<xs:restriction base="xs:string">
+		<xs:restriction base="xs:token">
 			<xs:enumeration value="00"/>
 			<xs:enumeration value="01"/>
 			<xs:enumeration value="02"/>
@@ -4431,7 +4431,7 @@ ou 2 – Outros.</xs:documentation>
 		<xs:annotation>
 			<xs:documentation> Tipo Modelo do Documento</xs:documentation>
 		</xs:annotation>
-		<xs:restriction base="xs:string">
+		<xs:restriction base="xs:token">
 			<xs:enumeration value="01"/>
 			<xs:enumeration value="1B"/>
 			<xs:enumeration value="02"/>
@@ -4467,7 +4467,7 @@ ou 2 – Outros.</xs:documentation>
 		<xs:annotation>
 			<xs:documentation> Tipo Versão do CT-e - 1.02</xs:documentation>
 		</xs:annotation>
-		<xs:restriction base="xs:string">
+		<xs:restriction base="xs:token">
 			<xs:pattern value="1\.02"/>
 		</xs:restriction>
 	</xs:simpleType>
@@ -4475,7 +4475,7 @@ ou 2 – Outros.</xs:documentation>
 		<xs:annotation>
 			<xs:documentation> Tipo hora</xs:documentation>
 		</xs:annotation>
-		<xs:restriction base="xs:string">
+		<xs:restriction base="xs:token">
 			<xs:pattern value="(([0-1][0-9])|([2][0-3])):([0-5][0-9]):([0-5][0-9])"/>
 		</xs:restriction>
 	</xs:simpleType>

@@ -1,74 +1,14 @@
 parsing a schema...
-[WARNING] java.io.FileNotFoundException: /home/paulo.alves/git/CTeModel/schema/consReciCteTiposBasico_v2.00.xsd (No such file or directory)
-  line 3 of file:/home/paulo.alves/git/CTeModel/schema/consReciCTe_v2.00.xsd
+[ERROR] 'TModTransp' is already defined
+  line 3620 of file:/home/paulo.alves/git/CTeModel/schema/cteTiposBasico_v2.00.xsd
 
-[WARNING] java.io.FileNotFoundException: /home/paulo.alves/git/CTeModel/schema/cancCTeTiposBasico_v1.04.xsd (No such file or directory)
-  line 5 of file:/home/paulo.alves/git/CTeModel/schema/consSitCTeTiposBasico_v2.00.xsd
+[ERROR] (related to above error) the first definition appears here
+  line 235 of file:/home/paulo.alves/git/CTeModel/schema/eventoCTeTiposBasico_v2.00.xsd
 
-[WARNING] java.io.FileNotFoundException: /home/paulo.alves/git/CTeModel/schema/inutCteTiposBasico_v2.00.xsd (No such file or directory)
-  line 3 of file:/home/paulo.alves/git/CTeModel/schema/inutCTe_v2.00.xsd
+[ERROR] 'TPlaca' is already defined
+  line 23 of file:/home/paulo.alves/git/CTeModel/schema/cteModalRodoviario_v2.00.xsd
 
-[WARNING] java.io.FileNotFoundException: /home/paulo.alves/git/CTeModel/schema/consReciCteTiposBasico_v2.00.xsd (No such file or directory)
-  line 4 of file:/home/paulo.alves/git/CTeModel/schema/procCTe_v2.00.xsd
+[ERROR] (related to above error) the first definition appears here
+  line 257 of file:/home/paulo.alves/git/CTeModel/schema/eventoCTeTiposBasico_v2.00.xsd
 
-[WARNING] java.io.FileNotFoundException: /home/paulo.alves/git/CTeModel/schema/consReciCteTiposBasico_v2.00.xsd (No such file or directory)
-  line 3 of file:/home/paulo.alves/git/CTeModel/schema/retConsReciCTe_v2.00.xsd
-
-[WARNING] java.io.FileNotFoundException: /home/paulo.alves/git/CTeModel/schema/inutCteTiposBasico_v2.00.xsd (No such file or directory)
-  line 3 of file:/home/paulo.alves/git/CTeModel/schema/retInutCTe_v2.00.xsd
-
-compiling a schema...
-org/w3/_2000/_09/xmldsig/KeyInfoType.java
-org/w3/_2000/_09/xmldsig/ObjectFactory.java
-org/w3/_2000/_09/xmldsig/ReferenceType.java
-org/w3/_2000/_09/xmldsig/SignatureType.java
-org/w3/_2000/_09/xmldsig/SignatureValueType.java
-org/w3/_2000/_09/xmldsig/SignedInfoType.java
-org/w3/_2000/_09/xmldsig/TransformType.java
-org/w3/_2000/_09/xmldsig/TransformsType.java
-org/w3/_2000/_09/xmldsig/X509DataType.java
-org/w3/_2000/_09/xmldsig/package-info.java
-br/inf/portalfiscal/cte/Aereo.java
-br/inf/portalfiscal/cte/Aquav.java
-br/inf/portalfiscal/cte/CteProc.java
-br/inf/portalfiscal/cte/Duto.java
-br/inf/portalfiscal/cte/EvCCeCTe.java
-br/inf/portalfiscal/cte/EvCancCTe.java
-br/inf/portalfiscal/cte/EvEPECCTe.java
-br/inf/portalfiscal/cte/EvRegMultimodal.java
-br/inf/portalfiscal/cte/Ferrov.java
-br/inf/portalfiscal/cte/Multimodal.java
-br/inf/portalfiscal/cte/ObjectFactory.java
-br/inf/portalfiscal/cte/Rodo.java
-br/inf/portalfiscal/cte/TCTe.java
-br/inf/portalfiscal/cte/TCancCTe.java
-br/inf/portalfiscal/cte/TConsReciCTe.java
-br/inf/portalfiscal/cte/TConsSitCTe.java
-br/inf/portalfiscal/cte/TConsStatServ.java
-br/inf/portalfiscal/cte/TEndOrg.java
-br/inf/portalfiscal/cte/TEndReEnt.java
-br/inf/portalfiscal/cte/TEndeEmi.java
-br/inf/portalfiscal/cte/TEnderFer.java
-br/inf/portalfiscal/cte/TEndereco.java
-br/inf/portalfiscal/cte/TEndernac.java
-br/inf/portalfiscal/cte/TEnviCTe.java
-br/inf/portalfiscal/cte/TEvento.java
-br/inf/portalfiscal/cte/TImp.java
-br/inf/portalfiscal/cte/TInutCTe.java
-br/inf/portalfiscal/cte/TLocal.java
-br/inf/portalfiscal/cte/TProcCancCTe.java
-br/inf/portalfiscal/cte/TProcEvento.java
-br/inf/portalfiscal/cte/TProcInutCTe.java
-br/inf/portalfiscal/cte/TProtCTe.java
-br/inf/portalfiscal/cte/TRetCancCTe.java
-br/inf/portalfiscal/cte/TRetConsReciCTe.java
-br/inf/portalfiscal/cte/TRetConsSitCTe.java
-br/inf/portalfiscal/cte/TRetConsStatServ.java
-br/inf/portalfiscal/cte/TRetEnviCTe.java
-br/inf/portalfiscal/cte/TRetEvento.java
-br/inf/portalfiscal/cte/TRetInutCTe.java
-br/inf/portalfiscal/cte/TUFSemEX.java
-br/inf/portalfiscal/cte/TUf.java
-br/inf/portalfiscal/cte/TUnidCarga.java
-br/inf/portalfiscal/cte/TUnidadeTransp.java
-br/inf/portalfiscal/cte/package-info.java
+Failed to parse a schema.

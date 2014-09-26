@@ -1,2 +1,2 @@
 #!/bin/bash
-xjc *.xsd &> script.log
+xjc -d ../project/CTeModel/src/main/java *.xsd &> script.log

@@ -1,7 +1,7 @@
 CTeModel
 ========
 
-Projeto com objetos utilizados nos serviços de CTe disponibilizados pela Receita Federal do Brasil.
+Projeto com objetos utilizados nos serviços de CTe disponibilizados pelas Secretarias de Fazenda.
 
 Instalação
 --------

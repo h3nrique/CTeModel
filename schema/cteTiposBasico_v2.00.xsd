@@ -3652,20 +3652,6 @@ Por exemplo: para rodoviário tração ou reboque deverá preencher com a placa 
 			<xs:enumeration value="55"/>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:simpleType name="TModTransp">
-		<xs:annotation>
-			<xs:documentation> Tipo Modal transporte</xs:documentation>
-		</xs:annotation>
-		<xs:restriction base="xs:string">
-			<xs:whiteSpace value="preserve"/>
-			<xs:enumeration value="01"/>
-			<xs:enumeration value="02"/>
-			<xs:enumeration value="03"/>
-			<xs:enumeration value="04"/>
-			<xs:enumeration value="05"/>
-			<xs:enumeration value="06"/>
-		</xs:restriction>
-	</xs:simpleType>
 	<xs:simpleType name="TProcEmi">
 		<xs:annotation>
 			<xs:documentation>Tipo processo de emissão do CT-e</xs:documentation>

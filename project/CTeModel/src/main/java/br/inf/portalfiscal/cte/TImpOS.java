@@ -15,14 +15,14 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * Tipo Dados do Imposto CT-e
+ * Tipo Dados do Imposto para CT-e OS
  * 
- * <p>Java class for TImp complex type.
+ * <p>Java class for TImpOS complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="TImp">
+ * &lt;complexType name="TImpOS">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;choice>
@@ -47,28 +47,6 @@ import javax.xml.bind.annotation.XmlType;
  *             &lt;/complexContent>
  *           &lt;/complexType>
  *         &lt;/element>
- *         &lt;element name="ICMS20">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;element name="CST">
- *                     &lt;simpleType>
- *                       &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *                         &lt;whiteSpace value="preserve"/>
- *                         &lt;enumeration value="20"/>
- *                       &lt;/restriction>
- *                     &lt;/simpleType>
- *                   &lt;/element>
- *                   &lt;element name="pRedBC" type="{http://www.portalfiscal.inf.br/cte}TDec_0302Opc"/>
- *                   &lt;element name="vBC" type="{http://www.portalfiscal.inf.br/cte}TDec_1302"/>
- *                   &lt;element name="pICMS" type="{http://www.portalfiscal.inf.br/cte}TDec_0302"/>
- *                   &lt;element name="vICMS" type="{http://www.portalfiscal.inf.br/cte}TDec_1302"/>
- *                 &lt;/sequence>
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
  *         &lt;element name="ICMS45">
  *           &lt;complexType>
  *             &lt;complexContent>
@@ -84,28 +62,6 @@ import javax.xml.bind.annotation.XmlType;
  *                       &lt;/restriction>
  *                     &lt;/simpleType>
  *                   &lt;/element>
- *                 &lt;/sequence>
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element name="ICMS60">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;element name="CST">
- *                     &lt;simpleType>
- *                       &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *                         &lt;whiteSpace value="preserve"/>
- *                         &lt;enumeration value="60"/>
- *                       &lt;/restriction>
- *                     &lt;/simpleType>
- *                   &lt;/element>
- *                   &lt;element name="vBCSTRet" type="{http://www.portalfiscal.inf.br/cte}TDec_1302"/>
- *                   &lt;element name="vICMSSTRet" type="{http://www.portalfiscal.inf.br/cte}TDec_1302"/>
- *                   &lt;element name="pICMSSTRet" type="{http://www.portalfiscal.inf.br/cte}TDec_0302"/>
- *                   &lt;element name="vCred" type="{http://www.portalfiscal.inf.br/cte}TDec_1302" minOccurs="0"/>
  *                 &lt;/sequence>
  *               &lt;/restriction>
  *             &lt;/complexContent>
@@ -191,41 +147,35 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TImp", propOrder = {
+@XmlType(name = "TImpOS", propOrder = {
     "icms00",
-    "icms20",
     "icms45",
-    "icms60",
     "icms90",
     "icmsOutraUF",
     "icmssn"
 })
-public class TImp {
+public class TImpOS {
 
     @XmlElement(name = "ICMS00")
-    protected TImp.ICMS00 icms00;
-    @XmlElement(name = "ICMS20")
-    protected TImp.ICMS20 icms20;
+    protected TImpOS.ICMS00 icms00;
     @XmlElement(name = "ICMS45")
-    protected TImp.ICMS45 icms45;
-    @XmlElement(name = "ICMS60")
-    protected TImp.ICMS60 icms60;
+    protected TImpOS.ICMS45 icms45;
     @XmlElement(name = "ICMS90")
-    protected TImp.ICMS90 icms90;
+    protected TImpOS.ICMS90 icms90;
     @XmlElement(name = "ICMSOutraUF")
-    protected TImp.ICMSOutraUF icmsOutraUF;
+    protected TImpOS.ICMSOutraUF icmsOutraUF;
     @XmlElement(name = "ICMSSN")
-    protected TImp.ICMSSN icmssn;
+    protected TImpOS.ICMSSN icmssn;
 
     /**
      * Gets the value of the icms00 property.
      * 
      * @return
      *     possible object is
-     *     {@link TImp.ICMS00 }
+     *     {@link TImpOS.ICMS00 }
      *     
      */
-    public TImp.ICMS00 getICMS00() {
+    public TImpOS.ICMS00 getICMS00() {
         return icms00;
     }
 
@@ -234,35 +184,11 @@ public class TImp {
      * 
      * @param value
      *     allowed object is
-     *     {@link TImp.ICMS00 }
+     *     {@link TImpOS.ICMS00 }
      *     
      */
-    public void setICMS00(TImp.ICMS00 value) {
+    public void setICMS00(TImpOS.ICMS00 value) {
         this.icms00 = value;
-    }
-
-    /**
-     * Gets the value of the icms20 property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link TImp.ICMS20 }
-     *     
-     */
-    public TImp.ICMS20 getICMS20() {
-        return icms20;
-    }
-
-    /**
-     * Sets the value of the icms20 property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link TImp.ICMS20 }
-     *     
-     */
-    public void setICMS20(TImp.ICMS20 value) {
-        this.icms20 = value;
     }
 
     /**
@@ -270,10 +196,10 @@ public class TImp {
      * 
      * @return
      *     possible object is
-     *     {@link TImp.ICMS45 }
+     *     {@link TImpOS.ICMS45 }
      *     
      */
-    public TImp.ICMS45 getICMS45() {
+    public TImpOS.ICMS45 getICMS45() {
         return icms45;
     }
 
@@ -282,35 +208,11 @@ public class TImp {
      * 
      * @param value
      *     allowed object is
-     *     {@link TImp.ICMS45 }
+     *     {@link TImpOS.ICMS45 }
      *     
      */
-    public void setICMS45(TImp.ICMS45 value) {
+    public void setICMS45(TImpOS.ICMS45 value) {
         this.icms45 = value;
-    }
-
-    /**
-     * Gets the value of the icms60 property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link TImp.ICMS60 }
-     *     
-     */
-    public TImp.ICMS60 getICMS60() {
-        return icms60;
-    }
-
-    /**
-     * Sets the value of the icms60 property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link TImp.ICMS60 }
-     *     
-     */
-    public void setICMS60(TImp.ICMS60 value) {
-        this.icms60 = value;
     }
 
     /**
@@ -318,10 +220,10 @@ public class TImp {
      * 
      * @return
      *     possible object is
-     *     {@link TImp.ICMS90 }
+     *     {@link TImpOS.ICMS90 }
      *     
      */
-    public TImp.ICMS90 getICMS90() {
+    public TImpOS.ICMS90 getICMS90() {
         return icms90;
     }
 
@@ -330,10 +232,10 @@ public class TImp {
      * 
      * @param value
      *     allowed object is
-     *     {@link TImp.ICMS90 }
+     *     {@link TImpOS.ICMS90 }
      *     
      */
-    public void setICMS90(TImp.ICMS90 value) {
+    public void setICMS90(TImpOS.ICMS90 value) {
         this.icms90 = value;
     }
 
@@ -342,10 +244,10 @@ public class TImp {
      * 
      * @return
      *     possible object is
-     *     {@link TImp.ICMSOutraUF }
+     *     {@link TImpOS.ICMSOutraUF }
      *     
      */
-    public TImp.ICMSOutraUF getICMSOutraUF() {
+    public TImpOS.ICMSOutraUF getICMSOutraUF() {
         return icmsOutraUF;
     }
 
@@ -354,10 +256,10 @@ public class TImp {
      * 
      * @param value
      *     allowed object is
-     *     {@link TImp.ICMSOutraUF }
+     *     {@link TImpOS.ICMSOutraUF }
      *     
      */
-    public void setICMSOutraUF(TImp.ICMSOutraUF value) {
+    public void setICMSOutraUF(TImpOS.ICMSOutraUF value) {
         this.icmsOutraUF = value;
     }
 
@@ -366,10 +268,10 @@ public class TImp {
      * 
      * @return
      *     possible object is
-     *     {@link TImp.ICMSSN }
+     *     {@link TImpOS.ICMSSN }
      *     
      */
-    public TImp.ICMSSN getICMSSN() {
+    public TImpOS.ICMSSN getICMSSN() {
         return icmssn;
     }
 
@@ -378,10 +280,10 @@ public class TImp {
      * 
      * @param value
      *     allowed object is
-     *     {@link TImp.ICMSSN }
+     *     {@link TImpOS.ICMSSN }
      *     
      */
-    public void setICMSSN(TImp.ICMSSN value) {
+    public void setICMSSN(TImpOS.ICMSSN value) {
         this.icmssn = value;
     }
 
@@ -546,180 +448,6 @@ public class TImp {
      *           &lt;simpleType>
      *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
      *               &lt;whiteSpace value="preserve"/>
-     *               &lt;enumeration value="20"/>
-     *             &lt;/restriction>
-     *           &lt;/simpleType>
-     *         &lt;/element>
-     *         &lt;element name="pRedBC" type="{http://www.portalfiscal.inf.br/cte}TDec_0302Opc"/>
-     *         &lt;element name="vBC" type="{http://www.portalfiscal.inf.br/cte}TDec_1302"/>
-     *         &lt;element name="pICMS" type="{http://www.portalfiscal.inf.br/cte}TDec_0302"/>
-     *         &lt;element name="vICMS" type="{http://www.portalfiscal.inf.br/cte}TDec_1302"/>
-     *       &lt;/sequence>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
-     * </pre>
-     * 
-     * 
-     */
-    @XmlAccessorType(XmlAccessType.FIELD)
-    @XmlType(name = "", propOrder = {
-        "cst",
-        "pRedBC",
-        "vbc",
-        "picms",
-        "vicms"
-    })
-    public static class ICMS20 {
-
-        @XmlElement(name = "CST", required = true)
-        protected String cst;
-        @XmlElement(required = true)
-        protected String pRedBC;
-        @XmlElement(name = "vBC", required = true)
-        protected String vbc;
-        @XmlElement(name = "pICMS", required = true)
-        protected String picms;
-        @XmlElement(name = "vICMS", required = true)
-        protected String vicms;
-
-        /**
-         * Gets the value of the cst property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
-         */
-        public String getCST() {
-            return cst;
-        }
-
-        /**
-         * Sets the value of the cst property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
-         */
-        public void setCST(String value) {
-            this.cst = value;
-        }
-
-        /**
-         * Gets the value of the pRedBC property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
-         */
-        public String getPRedBC() {
-            return pRedBC;
-        }
-
-        /**
-         * Sets the value of the pRedBC property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
-         */
-        public void setPRedBC(String value) {
-            this.pRedBC = value;
-        }
-
-        /**
-         * Gets the value of the vbc property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
-         */
-        public String getVBC() {
-            return vbc;
-        }
-
-        /**
-         * Sets the value of the vbc property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
-         */
-        public void setVBC(String value) {
-            this.vbc = value;
-        }
-
-        /**
-         * Gets the value of the picms property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
-         */
-        public String getPICMS() {
-            return picms;
-        }
-
-        /**
-         * Sets the value of the picms property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
-         */
-        public void setPICMS(String value) {
-            this.picms = value;
-        }
-
-        /**
-         * Gets the value of the vicms property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
-         */
-        public String getVICMS() {
-            return vicms;
-        }
-
-        /**
-         * Sets the value of the vicms property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
-         */
-        public void setVICMS(String value) {
-            this.vicms = value;
-        }
-
-    }
-
-
-    /**
-     * <p>Java class for anonymous complex type.
-     * 
-     * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
-     * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element name="CST">
-     *           &lt;simpleType>
-     *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
-     *               &lt;whiteSpace value="preserve"/>
      *               &lt;enumeration value="40"/>
      *               &lt;enumeration value="41"/>
      *               &lt;enumeration value="51"/>
@@ -765,179 +493,6 @@ public class TImp {
          */
         public void setCST(String value) {
             this.cst = value;
-        }
-
-    }
-
-
-    /**
-     * <p>Java class for anonymous complex type.
-     * 
-     * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
-     * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element name="CST">
-     *           &lt;simpleType>
-     *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
-     *               &lt;whiteSpace value="preserve"/>
-     *               &lt;enumeration value="60"/>
-     *             &lt;/restriction>
-     *           &lt;/simpleType>
-     *         &lt;/element>
-     *         &lt;element name="vBCSTRet" type="{http://www.portalfiscal.inf.br/cte}TDec_1302"/>
-     *         &lt;element name="vICMSSTRet" type="{http://www.portalfiscal.inf.br/cte}TDec_1302"/>
-     *         &lt;element name="pICMSSTRet" type="{http://www.portalfiscal.inf.br/cte}TDec_0302"/>
-     *         &lt;element name="vCred" type="{http://www.portalfiscal.inf.br/cte}TDec_1302" minOccurs="0"/>
-     *       &lt;/sequence>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
-     * </pre>
-     * 
-     * 
-     */
-    @XmlAccessorType(XmlAccessType.FIELD)
-    @XmlType(name = "", propOrder = {
-        "cst",
-        "vbcstRet",
-        "vicmsstRet",
-        "picmsstRet",
-        "vCred"
-    })
-    public static class ICMS60 {
-
-        @XmlElement(name = "CST", required = true)
-        protected String cst;
-        @XmlElement(name = "vBCSTRet", required = true)
-        protected String vbcstRet;
-        @XmlElement(name = "vICMSSTRet", required = true)
-        protected String vicmsstRet;
-        @XmlElement(name = "pICMSSTRet", required = true)
-        protected String picmsstRet;
-        protected String vCred;
-
-        /**
-         * Gets the value of the cst property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
-         */
-        public String getCST() {
-            return cst;
-        }
-
-        /**
-         * Sets the value of the cst property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
-         */
-        public void setCST(String value) {
-            this.cst = value;
-        }
-
-        /**
-         * Gets the value of the vbcstRet property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
-         */
-        public String getVBCSTRet() {
-            return vbcstRet;
-        }
-
-        /**
-         * Sets the value of the vbcstRet property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
-         */
-        public void setVBCSTRet(String value) {
-            this.vbcstRet = value;
-        }
-
-        /**
-         * Gets the value of the vicmsstRet property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
-         */
-        public String getVICMSSTRet() {
-            return vicmsstRet;
-        }
-
-        /**
-         * Sets the value of the vicmsstRet property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
-         */
-        public void setVICMSSTRet(String value) {
-            this.vicmsstRet = value;
-        }
-
-        /**
-         * Gets the value of the picmsstRet property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
-         */
-        public String getPICMSSTRet() {
-            return picmsstRet;
-        }
-
-        /**
-         * Sets the value of the picmsstRet property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
-         */
-        public void setPICMSSTRet(String value) {
-            this.picmsstRet = value;
-        }
-
-        /**
-         * Gets the value of the vCred property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
-         */
-        public String getVCred() {
-            return vCred;
-        }
-
-        /**
-         * Sets the value of the vCred property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
-         */
-        public void setVCred(String value) {
-            this.vCred = value;
         }
 
     }

@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>br.com.midiadev.sefaz</groupId>
 	<artifactId>CTeModel</artifactId>
-	<version>2.00a_NT2015.001</version>
+	<version>3.00_31-10-2016</version>
 	<packaging>jar</packaging>
 
 	<properties>

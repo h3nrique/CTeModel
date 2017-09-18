@@ -29,12 +29,27 @@ import javax.xml.bind.annotation.XmlType;
  *           &lt;simpleType>
  *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
  *               &lt;whiteSpace value="preserve"/>
- *               &lt;enumeration value="Cancelamento"/>
+ *               &lt;enumeration value="Prestação do Serviço em Desacordo"/>
  *             &lt;/restriction>
  *           &lt;/simpleType>
  *         &lt;/element>
- *         &lt;element name="nProt" type="{http://www.portalfiscal.inf.br/cte}TProt"/>
- *         &lt;element name="xJust" type="{http://www.portalfiscal.inf.br/cte}TJust"/>
+ *         &lt;element name="indDesacordoOper">
+ *           &lt;simpleType>
+ *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
+ *               &lt;enumeration value="1"/>
+ *             &lt;/restriction>
+ *           &lt;/simpleType>
+ *         &lt;/element>
+ *         &lt;element name="xObs">
+ *           &lt;simpleType>
+ *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
+ *               &lt;minLength value="15"/>
+ *               &lt;maxLength value="255"/>
+ *               &lt;whiteSpace value="preserve"/>
+ *               &lt;pattern value="[!-ÿ]{1}[ -ÿ]{0,}[!-ÿ]{1}|[!-ÿ]{1}"/>
+ *             &lt;/restriction>
+ *           &lt;/simpleType>
+ *         &lt;/element>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -46,18 +61,18 @@ import javax.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
     "descEvento",
-    "nProt",
-    "xJust"
+    "indDesacordoOper",
+    "xObs"
 })
-@XmlRootElement(name = "evCancCTe")
-public class EvCancCTe {
+@XmlRootElement(name = "evPrestDesacordo")
+public class EvPrestDesacordo {
 
     @XmlElement(required = true)
     protected String descEvento;
     @XmlElement(required = true)
-    protected String nProt;
+    protected String indDesacordoOper;
     @XmlElement(required = true)
-    protected String xJust;
+    protected String xObs;
 
     /**
      * Gets the value of the descEvento property.
@@ -84,51 +99,51 @@ public class EvCancCTe {
     }
 
     /**
-     * Gets the value of the nProt property.
+     * Gets the value of the indDesacordoOper property.
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getNProt() {
-        return nProt;
+    public String getIndDesacordoOper() {
+        return indDesacordoOper;
     }
 
     /**
-     * Sets the value of the nProt property.
+     * Sets the value of the indDesacordoOper property.
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setNProt(String value) {
-        this.nProt = value;
+    public void setIndDesacordoOper(String value) {
+        this.indDesacordoOper = value;
     }
 
     /**
-     * Gets the value of the xJust property.
+     * Gets the value of the xObs property.
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getXJust() {
-        return xJust;
+    public String getXObs() {
+        return xObs;
     }
 
     /**
-     * Sets the value of the xJust property.
+     * Sets the value of the xObs property.
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setXJust(String value) {
-        this.xJust = value;
+    public void setXObs(String value) {
+        this.xObs = value;
     }
 
 }

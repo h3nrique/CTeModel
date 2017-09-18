@@ -221,12 +221,35 @@ Insira neste local o XML específico do tipo de evento (cancelamento, encerramen
 			<xs:pattern value="3\.00"/>
 		</xs:restriction>
 	</xs:simpleType>
+	<xs:simpleType name="TModTransp">
+		<xs:annotation>
+			<xs:documentation> Tipo Modal transporte</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:whiteSpace value="preserve"/>
+			<xs:enumeration value="01"/>
+			<xs:enumeration value="02"/>
+			<xs:enumeration value="03"/>
+			<xs:enumeration value="04"/>
+			<xs:enumeration value="05"/>
+			<xs:enumeration value="06"/>
+		</xs:restriction>
+	</xs:simpleType>
 	<xs:simpleType name="TNSU">
 		<xs:annotation>
 			<xs:documentation> Tipo número sequencial único do AN</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:pattern value="[0-9]{15}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="TPlaca">
+		<xs:annotation>
+			<xs:documentation>Tipo Placa </xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:whiteSpace value="preserve"/>
+			<xs:pattern value="[A-Z]{2,3}[0-9]{4}|[A-Z]{3,4}[0-9]{3}"/>
 		</xs:restriction>
 	</xs:simpleType>
 </xs:schema>

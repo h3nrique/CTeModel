@@ -16,21 +16,21 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * Tipo Pedido de Consulta do Recibo do Lote de CT-e
+ * Tipo Pedido de Cancelamento de CT-e processado
  * 
- * <p>Java class for TConsReciCTe complex type.
+ * <p>Java class for TProcCancCTe complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="TConsReciCTe">
+ * &lt;complexType name="TProcCancCTe">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="tpAmb" type="{http://www.portalfiscal.inf.br/cte}TAmb"/>
- *         &lt;element name="nRec" type="{http://www.portalfiscal.inf.br/cte}TRec"/>
+ *         &lt;element name="cancCTe" type="{http://www.portalfiscal.inf.br/cte}TCancCTe"/>
+ *         &lt;element name="retCancCTe" type="{http://www.portalfiscal.inf.br/cte}TRetCancCTe"/>
  *       &lt;/sequence>
- *       &lt;attribute name="versao" use="required" type="{http://www.portalfiscal.inf.br/cte}TVerConsReciCTe" />
+ *       &lt;attribute name="versao" use="required" type="{http://www.portalfiscal.inf.br/cte}TVerCancCTe" />
  *     &lt;/restriction>
  *   &lt;/complexContent>
  * &lt;/complexType>
@@ -39,65 +39,65 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TConsReciCTe", propOrder = {
-    "tpAmb",
-    "nRec"
+@XmlType(name = "TProcCancCTe", propOrder = {
+    "cancCTe",
+    "retCancCTe"
 })
-public class TConsReciCTe {
+public class TProcCancCTe {
 
     @XmlElement(required = true)
-    protected String tpAmb;
+    protected TCancCTe cancCTe;
     @XmlElement(required = true)
-    protected String nRec;
+    protected TRetCancCTe retCancCTe;
     @XmlAttribute(name = "versao", required = true)
     protected String versao;
 
     /**
-     * Gets the value of the tpAmb property.
+     * Gets the value of the cancCTe property.
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link TCancCTe }
      *     
      */
-    public String getTpAmb() {
-        return tpAmb;
+    public TCancCTe getCancCTe() {
+        return cancCTe;
     }
 
     /**
-     * Sets the value of the tpAmb property.
+     * Sets the value of the cancCTe property.
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link TCancCTe }
      *     
      */
-    public void setTpAmb(String value) {
-        this.tpAmb = value;
+    public void setCancCTe(TCancCTe value) {
+        this.cancCTe = value;
     }
 
     /**
-     * Gets the value of the nRec property.
+     * Gets the value of the retCancCTe property.
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link TRetCancCTe }
      *     
      */
-    public String getNRec() {
-        return nRec;
+    public TRetCancCTe getRetCancCTe() {
+        return retCancCTe;
     }
 
     /**
-     * Sets the value of the nRec property.
+     * Sets the value of the retCancCTe property.
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link TRetCancCTe }
      *     
      */
-    public void setNRec(String value) {
-        this.nRec = value;
+    public void setRetCancCTe(TRetCancCTe value) {
+        this.retCancCTe = value;
     }
 
     /**

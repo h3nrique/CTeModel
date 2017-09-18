@@ -20,43 +20,32 @@ import org.w3._2000._09.xmldsig_.SignatureType;
 
 
 /**
- * Tipo Pedido de Inutilização de Numeração do Conhecimento de Transporte eletrônico
+ * Tipo Pedido de Cancelamento de CT-e
  * 
- * <p>Java class for TInutCTe complex type.
+ * <p>Java class for TCancCTe complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="TInutCTe">
+ * &lt;complexType name="TCancCTe">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="infInut">
+ *         &lt;element name="infCanc">
  *           &lt;complexType>
  *             &lt;complexContent>
  *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *                 &lt;sequence>
  *                   &lt;element name="tpAmb" type="{http://www.portalfiscal.inf.br/cte}TAmb"/>
  *                   &lt;element name="xServ" type="{http://www.portalfiscal.inf.br/cte}TServ"/>
- *                   &lt;element name="cUF" type="{http://www.portalfiscal.inf.br/cte}TCodUfIBGE"/>
- *                   &lt;element name="ano">
- *                     &lt;simpleType>
- *                       &lt;restriction base="{http://www.w3.org/2001/XMLSchema}short">
- *                         &lt;pattern value="[0-9]{1,2}"/>
- *                       &lt;/restriction>
- *                     &lt;/simpleType>
- *                   &lt;/element>
- *                   &lt;element name="CNPJ" type="{http://www.portalfiscal.inf.br/cte}TCnpj"/>
- *                   &lt;element name="mod" type="{http://www.portalfiscal.inf.br/cte}TModCT_Carga_OS"/>
- *                   &lt;element name="serie" type="{http://www.portalfiscal.inf.br/cte}TSerie"/>
- *                   &lt;element name="nCTIni" type="{http://www.portalfiscal.inf.br/cte}TNF"/>
- *                   &lt;element name="nCTFin" type="{http://www.portalfiscal.inf.br/cte}TNF"/>
+ *                   &lt;element name="chCTe" type="{http://www.portalfiscal.inf.br/cte}TChNFe"/>
+ *                   &lt;element name="nProt" type="{http://www.portalfiscal.inf.br/cte}TProt"/>
  *                   &lt;element name="xJust" type="{http://www.portalfiscal.inf.br/cte}TJust"/>
  *                 &lt;/sequence>
  *                 &lt;attribute name="Id" use="required">
  *                   &lt;simpleType>
  *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}ID">
- *                       &lt;pattern value="ID[0-9]{39}"/>
+ *                       &lt;pattern value="ID[0-9]{44}"/>
  *                     &lt;/restriction>
  *                   &lt;/simpleType>
  *                 &lt;/attribute>
@@ -66,12 +55,7 @@ import org.w3._2000._09.xmldsig_.SignatureType;
  *         &lt;/element>
  *         &lt;element ref="{http://www.w3.org/2000/09/xmldsig#}Signature"/>
  *       &lt;/sequence>
- *       &lt;attribute name="versao" use="required">
- *         &lt;simpleType>
- *           &lt;restriction base="{http://www.portalfiscal.inf.br/cte}TVerInutCTe">
- *           &lt;/restriction>
- *         &lt;/simpleType>
- *       &lt;/attribute>
+ *       &lt;attribute name="versao" use="required" type="{http://www.portalfiscal.inf.br/cte}TVerCancCTe" />
  *     &lt;/restriction>
  *   &lt;/complexContent>
  * &lt;/complexType>
@@ -80,41 +64,41 @@ import org.w3._2000._09.xmldsig_.SignatureType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TInutCTe", propOrder = {
-    "infInut",
+@XmlType(name = "TCancCTe", propOrder = {
+    "infCanc",
     "signature"
 })
-public class TInutCTe {
+public class TCancCTe {
 
     @XmlElement(required = true)
-    protected TInutCTe.InfInut infInut;
+    protected TCancCTe.InfCanc infCanc;
     @XmlElement(name = "Signature", namespace = "http://www.w3.org/2000/09/xmldsig#", required = true)
     protected SignatureType signature;
     @XmlAttribute(name = "versao", required = true)
     protected String versao;
 
     /**
-     * Gets the value of the infInut property.
+     * Gets the value of the infCanc property.
      * 
      * @return
      *     possible object is
-     *     {@link TInutCTe.InfInut }
+     *     {@link TCancCTe.InfCanc }
      *     
      */
-    public TInutCTe.InfInut getInfInut() {
-        return infInut;
+    public TCancCTe.InfCanc getInfCanc() {
+        return infCanc;
     }
 
     /**
-     * Sets the value of the infInut property.
+     * Sets the value of the infCanc property.
      * 
      * @param value
      *     allowed object is
-     *     {@link TInutCTe.InfInut }
+     *     {@link TCancCTe.InfCanc }
      *     
      */
-    public void setInfInut(TInutCTe.InfInut value) {
-        this.infInut = value;
+    public void setInfCanc(TCancCTe.InfCanc value) {
+        this.infCanc = value;
     }
 
     /**
@@ -178,25 +162,14 @@ public class TInutCTe {
      *       &lt;sequence>
      *         &lt;element name="tpAmb" type="{http://www.portalfiscal.inf.br/cte}TAmb"/>
      *         &lt;element name="xServ" type="{http://www.portalfiscal.inf.br/cte}TServ"/>
-     *         &lt;element name="cUF" type="{http://www.portalfiscal.inf.br/cte}TCodUfIBGE"/>
-     *         &lt;element name="ano">
-     *           &lt;simpleType>
-     *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}short">
-     *               &lt;pattern value="[0-9]{1,2}"/>
-     *             &lt;/restriction>
-     *           &lt;/simpleType>
-     *         &lt;/element>
-     *         &lt;element name="CNPJ" type="{http://www.portalfiscal.inf.br/cte}TCnpj"/>
-     *         &lt;element name="mod" type="{http://www.portalfiscal.inf.br/cte}TModCT_Carga_OS"/>
-     *         &lt;element name="serie" type="{http://www.portalfiscal.inf.br/cte}TSerie"/>
-     *         &lt;element name="nCTIni" type="{http://www.portalfiscal.inf.br/cte}TNF"/>
-     *         &lt;element name="nCTFin" type="{http://www.portalfiscal.inf.br/cte}TNF"/>
+     *         &lt;element name="chCTe" type="{http://www.portalfiscal.inf.br/cte}TChNFe"/>
+     *         &lt;element name="nProt" type="{http://www.portalfiscal.inf.br/cte}TProt"/>
      *         &lt;element name="xJust" type="{http://www.portalfiscal.inf.br/cte}TJust"/>
      *       &lt;/sequence>
      *       &lt;attribute name="Id" use="required">
      *         &lt;simpleType>
      *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}ID">
-     *             &lt;pattern value="ID[0-9]{39}"/>
+     *             &lt;pattern value="ID[0-9]{44}"/>
      *           &lt;/restriction>
      *         &lt;/simpleType>
      *       &lt;/attribute>
@@ -211,34 +184,20 @@ public class TInutCTe {
     @XmlType(name = "", propOrder = {
         "tpAmb",
         "xServ",
-        "cuf",
-        "ano",
-        "cnpj",
-        "mod",
-        "serie",
-        "nctIni",
-        "nctFin",
+        "chCTe",
+        "nProt",
         "xJust"
     })
-    public static class InfInut {
+    public static class InfCanc {
 
         @XmlElement(required = true)
         protected String tpAmb;
         @XmlElement(required = true)
         protected String xServ;
-        @XmlElement(name = "cUF", required = true)
-        protected String cuf;
-        protected short ano;
-        @XmlElement(name = "CNPJ", required = true)
-        protected String cnpj;
         @XmlElement(required = true)
-        protected String mod;
+        protected String chCTe;
         @XmlElement(required = true)
-        protected String serie;
-        @XmlElement(name = "nCTIni", required = true)
-        protected String nctIni;
-        @XmlElement(name = "nCTFin", required = true)
-        protected String nctFin;
+        protected String nProt;
         @XmlElement(required = true)
         protected String xJust;
         @XmlAttribute(name = "Id", required = true)
@@ -295,163 +254,51 @@ public class TInutCTe {
         }
 
         /**
-         * Gets the value of the cuf property.
+         * Gets the value of the chCTe property.
          * 
          * @return
          *     possible object is
          *     {@link String }
          *     
          */
-        public String getCUF() {
-            return cuf;
+        public String getChCTe() {
+            return chCTe;
         }
 
         /**
-         * Sets the value of the cuf property.
+         * Sets the value of the chCTe property.
          * 
          * @param value
          *     allowed object is
          *     {@link String }
          *     
          */
-        public void setCUF(String value) {
-            this.cuf = value;
+        public void setChCTe(String value) {
+            this.chCTe = value;
         }
 
         /**
-         * Gets the value of the ano property.
-         * 
-         */
-        public short getAno() {
-            return ano;
-        }
-
-        /**
-         * Sets the value of the ano property.
-         * 
-         */
-        public void setAno(short value) {
-            this.ano = value;
-        }
-
-        /**
-         * Gets the value of the cnpj property.
+         * Gets the value of the nProt property.
          * 
          * @return
          *     possible object is
          *     {@link String }
          *     
          */
-        public String getCNPJ() {
-            return cnpj;
+        public String getNProt() {
+            return nProt;
         }
 
         /**
-         * Sets the value of the cnpj property.
+         * Sets the value of the nProt property.
          * 
          * @param value
          *     allowed object is
          *     {@link String }
          *     
          */
-        public void setCNPJ(String value) {
-            this.cnpj = value;
-        }
-
-        /**
-         * Gets the value of the mod property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
-         */
-        public String getMod() {
-            return mod;
-        }
-
-        /**
-         * Sets the value of the mod property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
-         */
-        public void setMod(String value) {
-            this.mod = value;
-        }
-
-        /**
-         * Gets the value of the serie property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
-         */
-        public String getSerie() {
-            return serie;
-        }
-
-        /**
-         * Sets the value of the serie property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
-         */
-        public void setSerie(String value) {
-            this.serie = value;
-        }
-
-        /**
-         * Gets the value of the nctIni property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
-         */
-        public String getNCTIni() {
-            return nctIni;
-        }
-
-        /**
-         * Sets the value of the nctIni property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
-         */
-        public void setNCTIni(String value) {
-            this.nctIni = value;
-        }
-
-        /**
-         * Gets the value of the nctFin property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
-         */
-        public String getNCTFin() {
-            return nctFin;
-        }
-
-        /**
-         * Sets the value of the nctFin property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
-         */
-        public void setNCTFin(String value) {
-            this.nctFin = value;
+        public void setNProt(String value) {
+            this.nProt = value;
         }
 
         /**

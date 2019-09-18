@@ -29,28 +29,12 @@ import javax.xml.bind.annotation.XmlType;
  *           &lt;simpleType>
  *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
  *               &lt;whiteSpace value="preserve"/>
- *               &lt;enumeration value="Prestação do Serviço em Desacordo"/>
- *               &lt;enumeration value="Prestacao do Servico em Desacordo"/>
+ *               &lt;enumeration value="Cancelamento do Comprovante de Entrega do CT-e"/>
  *             &lt;/restriction>
  *           &lt;/simpleType>
  *         &lt;/element>
- *         &lt;element name="indDesacordoOper">
- *           &lt;simpleType>
- *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *               &lt;enumeration value="1"/>
- *             &lt;/restriction>
- *           &lt;/simpleType>
- *         &lt;/element>
- *         &lt;element name="xObs">
- *           &lt;simpleType>
- *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *               &lt;minLength value="15"/>
- *               &lt;maxLength value="255"/>
- *               &lt;whiteSpace value="preserve"/>
- *               &lt;pattern value="[!-ÿ]{1}[ -ÿ]{0,}[!-ÿ]{1}|[!-ÿ]{1}"/>
- *             &lt;/restriction>
- *           &lt;/simpleType>
- *         &lt;/element>
+ *         &lt;element name="nProt" type="{http://www.portalfiscal.inf.br/cte}TProt"/>
+ *         &lt;element name="nProtCE" type="{http://www.portalfiscal.inf.br/cte}TProt"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -62,18 +46,18 @@ import javax.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
     "descEvento",
-    "indDesacordoOper",
-    "xObs"
+    "nProt",
+    "nProtCE"
 })
-@XmlRootElement(name = "evPrestDesacordo")
-public class EvPrestDesacordo {
+@XmlRootElement(name = "evCancCECTe")
+public class EvCancCECTe {
 
     @XmlElement(required = true)
     protected String descEvento;
     @XmlElement(required = true)
-    protected String indDesacordoOper;
+    protected String nProt;
     @XmlElement(required = true)
-    protected String xObs;
+    protected String nProtCE;
 
     /**
      * Gets the value of the descEvento property.
@@ -100,51 +84,51 @@ public class EvPrestDesacordo {
     }
 
     /**
-     * Gets the value of the indDesacordoOper property.
+     * Gets the value of the nProt property.
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getIndDesacordoOper() {
-        return indDesacordoOper;
+    public String getNProt() {
+        return nProt;
     }
 
     /**
-     * Sets the value of the indDesacordoOper property.
+     * Sets the value of the nProt property.
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setIndDesacordoOper(String value) {
-        this.indDesacordoOper = value;
+    public void setNProt(String value) {
+        this.nProt = value;
     }
 
     /**
-     * Gets the value of the xObs property.
+     * Gets the value of the nProtCE property.
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getXObs() {
-        return xObs;
+    public String getNProtCE() {
+        return nProtCE;
     }
 
     /**
-     * Sets the value of the xObs property.
+     * Sets the value of the nProtCE property.
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setXObs(String value) {
-        this.xObs = value;
+    public void setNProtCE(String value) {
+        this.nProtCE = value;
     }
 
 }
